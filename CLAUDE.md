@@ -15,7 +15,7 @@ agent behavior, and the tooling that keeps it in sync with upstream.
 
 ```
 .claude/
-  skills/    26 vendored ECC skills, loaded on demand
+  skills/    31 total — 26 vendored from ECC, 5 written here
   agents/     7 vendored subagent definitions
   rules/      2 shared standards files
 docs/
@@ -24,6 +24,34 @@ scripts/
   sync-ecc.sh            refresh the vendored subset from a pinned upstream ref
 THIRD_PARTY_LICENSES.md  MIT + Apache-2.0 attribution for vendored files
 ```
+
+## Two layers of skills
+
+`.claude/skills/` holds both, distinguished by the `metadata.origin` frontmatter
+field:
+
+- **`origin: ECC`** — vendored third-party. Do not edit; see below.
+- **`origin: local`** — written for this business. Edit freely; this is the layer
+  that carries the actual commercial value.
+
+The local set:
+
+| Skill | Covers |
+| --- | --- |
+| `hawaii-import-logistics` | Jones Act routing, LCL/FCL, landed cost, demurrage, Waipahu drayage |
+| `cabinet-import-compliance` | AD/CVD on Chinese cabinets, TSCA Title VI, Lacey Act, classification |
+| `project-quoting` | Intake → takeoff → landed-cost pricing → proposal |
+| `lead-routing` | Brand assignment across Grandeur / Ke'a / Island Home, qualification |
+| `surplus-disposition` | Hold/list/wholesale/scrap decisions and pricing for Waipahu surplus |
+
+These reference each other and hand off to the pre-existing `ghl-sms-templates`
+and `craigslist-listings` skills. `sync-ecc.sh` reports them as untouched on
+every run and never removes them — it only deletes paths it is about to rewrite.
+
+Several carry **`Placeholder — fill from your own records`** markers where real
+operating data belongs (margins, lead times, carrying cost, freight rates).
+Those are the gaps to close first; until they are filled, the affected skills
+produce correct structure with estimates in it rather than numbers to send.
 
 ## Working with the vendored files
 

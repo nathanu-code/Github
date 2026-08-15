@@ -8,7 +8,7 @@ design business importing into Hawaii.
 
 | Path | Contents |
 | --- | --- |
-| `.claude/skills/` | 26 vendored skills — trade compliance, logistics, inventory, quality, marketing, research |
+| `.claude/skills/` | 31 skills — 26 vendored from ECC, 5 written for this business |
 | `.claude/agents/` | 7 vendored subagent definitions |
 | `.claude/rules/` | 2 shared standards files |
 | `docs/ECC-EVALUATION.md` | Assessment of ECC and the rationale for what was taken |
@@ -17,6 +17,24 @@ design business importing into Hawaii.
 
 Claude Code picks the skills up automatically — they load on demand when a task
 matches, and cost nothing when idle.
+
+## The domain layer
+
+Written for this business, not vendored. This is the part that isn't cloneable:
+
+| Skill | Covers |
+| --- | --- |
+| `hawaii-import-logistics` | Jones Act routing, Asia-direct vs Mainland, LCL/FCL, landed cost, demurrage, Waipahu drayage |
+| `cabinet-import-compliance` | AD/CVD on Chinese wooden cabinets, the "components thereof" trap, transshipment risk, TSCA Title VI, Lacey Act |
+| `project-quoting` | Intake completeness → takeoff → landed-cost pricing → allowances, exclusions, lead time |
+| `lead-routing` | Which brand owns a lead, qualification, disqualification, next action |
+| `surplus-disposition` | Hold / list / wholesale / donate / scrap decisions and pricing ladders |
+
+They hand off to each other and to the existing `ghl-sms-templates` and
+`craigslist-listings` skills. Sections marked
+**`Placeholder — fill from your own records`** are where your real numbers go —
+margins, lead times, freight rates, carrying cost. Those are deliberately not
+invented.
 
 ## The vendored skills
 

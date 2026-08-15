@@ -119,6 +119,20 @@ for r in "${RULES[@]}"; do
   fi
 done
 
+# Local (non-vendored) skills live alongside the vendored ones and are never
+# touched by this script — it only removes paths it is about to rewrite. Report
+# them so it stays obvious that they exist and are out of scope here.
+local_skills=()
+for d in "$DEST"/skills/*/; do
+  name="$(basename "$d")"
+  is_vendored=0
+  for s in "${SKILLS[@]}"; do [ "$s" = "$name" ] && is_vendored=1 && break; done
+  [ "$is_vendored" -eq 0 ] && local_skills+=("$name")
+done
+if [ "${#local_skills[@]}" -gt 0 ]; then
+  echo "[ecc-sync] left ${#local_skills[@]} local skill(s) untouched: ${local_skills[*]}"
+fi
+
 echo
 echo "[ecc-sync] done. upstream=$RESOLVED missing=$missing"
 if [ "$RESOLVED" != "$ECC_REF" ]; then
