@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-harness-construction": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/agent-harness-construction/SKILL.md",
+      "computedHash": "e034f38aa212f6eedb43382ce1c22c4af4fa3fc0545faa4fe09a3754a4c5a3df"
+    }
+  }
+}
