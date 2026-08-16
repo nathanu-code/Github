@@ -1,0 +1,12 @@
+# leadgap databases hold real prospect names and phone numbers
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# generated audits
+audits/
+
+__pycache__/
+*.py[cod]
+.DS_Store
