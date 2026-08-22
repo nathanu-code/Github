@@ -1,0 +1,33 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",           "x": 0,    "y": 0,    "w": 1080, "h": 1350, "title": "01 · System / Hook" },
+    { "file": "Solutions.dc.html",      "x": 1220, "y": 0,    "w": 1080, "h": 1350, "title": "02 · Our Solutions" },
+    { "file": "Transformation.dc.html", "x": 2440, "y": 0,    "w": 1080, "h": 1350, "title": "03 · Testimonial + Proof" },
+    { "file": "Guarantee.dc.html",      "x": 0,    "y": 1550, "w": 1080, "h": 1350, "title": "04 · Return Policy" },
+    { "file": "SocialProof.dc.html",    "x": 1220, "y": 1550, "w": 1080, "h": 1350, "title": "05 · Women Over 40" }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -300,
+      "w": 900,
+      "text": "Five Meta feed ads for Jullien Stellar Beauty, 1080×1350.\nEach one adapts a concept from the reference reel to Jullien's catalogue, claims and voice.\n\nEvery testimonial on these boards is a real quote pulled from jullienstellar.com, attributed to the name the site shows. Nothing here is invented — verify each one verbatim before the ads go live."
+    },
+    {
+      "id": "photo-slots",
+      "x": 2440,
+      "y": 1550,
+      "w": 700,
+      "text": "Board 03 ships with EMPTY before/after slots on purpose.\n\nFabricated or stock before/afters are the single fastest way to lose an ad account and draw an FTC problem. Drop in real customer photos with a signed release, shot in matching light, or cut the pair and run the board on the three proof points alone."
+    },
+    {
+      "id": "policy",
+      "x": 2440,
+      "y": 1900,
+      "w": 700,
+      "text": "Board 04 does NOT copy the reference ad's \"60-day money back\".\n\nJullien's actual policy is device replacement on malfunction, ampoules final sale. The board states that. If you want the reference ad's punch, you have to institute a real guarantee first — the production sheet has the copy ready for that case."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}
