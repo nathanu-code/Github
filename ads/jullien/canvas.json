@@ -1,0 +1,44 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",           "x": 0,    "y": 0,    "w": 1080, "h": 1350, "title": "01 · System / Hook" },
+    { "file": "Solutions.dc.html",      "x": 1220, "y": 0,    "w": 1080, "h": 1350, "title": "02 · Our Solutions" },
+    { "file": "Transformation.dc.html", "x": 2440, "y": 0,    "w": 1080, "h": 1350, "title": "03 · Testimonial + Proof" },
+    { "file": "Guarantee.dc.html",      "x": 0,    "y": 1550, "w": 1080, "h": 1350, "title": "04 · Return Policy" },
+    { "file": "SocialProof.dc.html",    "x": 1220, "y": 1550, "w": 1080, "h": 1350, "title": "05 · Women Over 40" },
+    { "file": "DontBuy.dc.html",        "x": 2440, "y": 1550, "w": 1080, "h": 1350, "title": "06 · Don't Buy This" },
+    { "file": "BestSeller.dc.html",     "x": 0,    "y": 3100, "w": 1080, "h": 1350, "title": "07 · Best-Seller" },
+    { "file": "Touchless.dc.html",      "x": 1220, "y": 3100, "w": 1080, "h": 1350, "title": "08 · Touchless vs Fingers" },
+    { "file": "Protocol.dc.html",       "x": 2440, "y": 3100, "w": 1080, "h": 1350, "title": "09 · The 4-Week Protocol" }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -320,
+      "w": 900,
+      "text": "Nine Meta feed ads for Jullien Stellar Beauty, 1080×1350.\nEach adapts a concept from the reference reel to Jullien's catalogue, claims and voice.\n\nEvery testimonial on these boards is a real quote from jullienstellar.com, attributed to the name the site shows. Nothing here is invented — verify each one verbatim before the ads go live."
+    },
+    {
+      "id": "photo-slots",
+      "x": 3660,
+      "y": 0,
+      "w": 700,
+      "text": "Board 03 ships with EMPTY before/after slots on purpose.\n\nDrop in real customer photos with a signed release, shot in matching light, or cut the pair and run the board on the three proof points alone. The pair you use has to be a typical result, not your best responder."
+    },
+    {
+      "id": "policy",
+      "x": 3660,
+      "y": 400,
+      "w": 700,
+      "text": "Boards 04 and 06 do NOT copy the reference ads' offers.\n\nJullien's actual policy is device replacement on malfunction, ampoules final sale — board 04 states that. The reference's \"40% OFF\" becomes the real 15% on the Essentials Set ($424.15 from $499). If either number moves, both boards move with it."
+    },
+    {
+      "id": "claims",
+      "x": 3660,
+      "y": 820,
+      "w": 700,
+      "text": "Three claims on the new boards need sign-off before spend:\n\n07 — \"Our best-selling\" is a first-party claim about Jullien's own ranking. Confirm the Airbrush + Core Complex duo actually is the top seller, or swap the line.\n\n08 — the fingertip framing is comparative. It rests on Jullien's own \"touchless by design\" and \"no waste\" positioning; keep it there and do not escalate it into a hygiene or infection claim.\n\n09 — the week-by-week milestones inherit the same substantiation the one-week / four-week claim needs. The seal says 8% and Engineered in Seoul, both factual. It deliberately does NOT say \"clinically studied\" — do not add that without a study."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

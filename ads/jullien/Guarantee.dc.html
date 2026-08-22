@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Jost', 'Century Gothic', 'Futura', sans-serif; }
+    a { color: #B5836E; } a:hover { color: #8E5B48; }
+    .hl { background: #EFDCD3; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 2px 6px; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #FFFFFF; box-sizing: border-box; padding: 82px 72px 58px; display: flex; flex-direction: column;">
+
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="g4rose" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#7E4E3D"/>
+        <stop offset="0.24" stop-color="#C08A70"/>
+        <stop offset="0.5" stop-color="#F0D3BE"/>
+        <stop offset="0.74" stop-color="#CE9679"/>
+        <stop offset="1" stop-color="#6F4234"/>
+      </linearGradient>
+      <linearGradient id="g4glass" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#C9B49F" stop-opacity="0.30"/>
+        <stop offset="0.44" stop-color="#FFFFFF" stop-opacity="0.92"/>
+        <stop offset="1" stop-color="#C9B49F" stop-opacity="0.26"/>
+      </linearGradient>
+      <radialGradient id="g4mist" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#C08A70" stop-opacity="0.22"/>
+        <stop offset="0.55" stop-color="#C08A70" stop-opacity="0.07"/>
+        <stop offset="1" stop-color="#C08A70" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="g4serum" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F2DCC8"/>
+        <stop offset="1" stop-color="#DDB393"/>
+      </linearGradient>
+      <path id="g4arc" d="M100,100 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"/>
+    </defs>
+  </svg>
+
+  <h1 style="margin: 0; font-family: 'Marcellus', Georgia, serif; font-size: 84px; line-height: 1.04; color: #4A2B3C;">Jullien&rsquo;s<br>Return Policy?</h1>
+  <div style="margin-top: 16px; font-family: 'Jost', 'Century Gothic', sans-serif; font-size: 46px; font-weight: 300; color: #4A2B3C;">Straight answers, no asterisks.</div>
+
+  <div style="display: flex; flex-direction: column; gap: 26px; margin-top: 48px; font-family: 'Space Mono', 'Courier New', monospace; font-size: 29px; line-height: 1.62; color: #2C2129;">
+    <div>Your device is covered. If the Stellar Airbrush malfunctions, <span class="hl">we replace it.</span></div>
+    <div>Ampoules are sealed actives, so they are <span class="hl">final sale</span> &mdash; the same reason they stay sterile.</div>
+    <div style="color: #6E5C68; font-size: 25px;">Start with the set. It is the least expensive way to find out whether touchless works for your skin.</div>
+  </div>
+
+  <div style="position: relative; flex-grow: 1; display: flex; align-items: center; justify-content: center; margin-top: 8px;">
+
+    <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) rotate(-9deg);">
+      <svg viewBox="0 0 200 200" width="216" height="216" role="img" aria-label="Essentials Set, save 15 percent">
+        <circle cx="100" cy="100" r="92" fill="{{accent}}"/>
+        <text font-family="'Space Mono', 'Courier New', monospace" font-size="12.5" letter-spacing="3.1" fill="#F6F1EA" opacity="0.92">
+          <textPath href="#g4arc" startOffset="0">THE ESSENTIALS SET &middot; THE ESSENTIALS SET &middot; </textPath>
+        </text>
+        <text x="100" y="92" text-anchor="middle" font-family="'Jost', 'Century Gothic', sans-serif" font-size="31" font-weight="600" letter-spacing="1" fill="#F6F1EA">SAVE</text>
+        <text x="100" y="134" text-anchor="middle" font-family="'Jost', 'Century Gothic', sans-serif" font-size="42" font-weight="600" letter-spacing="0" fill="#F6F1EA">15%</text>
+      </svg>
+    </div>
+
+    <div style="position: relative; margin-left: 150px;">
+      <svg viewBox="0 0 300 470" width="330" height="430" role="img" aria-label="The Stellar Airbrush and Core Complex ampoule">
+        <ellipse cx="168" cy="72" rx="112" ry="44" fill="url(#g4mist)"/>
+        <circle cx="132" cy="62" r="4" fill="#B5836E" opacity="0.30"/>
+        <circle cx="176" cy="38" r="3" fill="#B5836E" opacity="0.26"/>
+        <circle cx="208" cy="66" r="4.5" fill="#B5836E" opacity="0.22"/>
+
+        <g>
+          <rect x="30" y="252" width="52" height="164" rx="23" fill="url(#g4glass)" stroke="#D8C6B4" stroke-width="2"/>
+          <path d="M34 344 h44 v48 a22 22 0 0 1 -22 24 h0 a22 22 0 0 1 -22 -24 z" fill="url(#g4serum)"/>
+          <rect x="42" y="224" width="28" height="32" fill="url(#g4glass)" stroke="#D8C6B4" stroke-width="2"/>
+          <rect x="35" y="202" width="42" height="26" rx="8" fill="url(#g4rose)"/>
+        </g>
+
+        <g>
+          <path d="M154 112 h28 l-4 22 h-20 z" fill="#EBD7C6"/>
+          <path d="M132 134 h72 a12 12 0 0 1 12 12 v50 a34 34 0 0 1 -34 34 h-28 a34 34 0 0 1 -34 -34 v-50 a12 12 0 0 1 12 -12 z" fill="url(#g4glass)" stroke="#D8C6B4" stroke-width="2.5"/>
+          <path d="M140 186 h56 a30 30 0 0 1 -28 40 h0 a30 30 0 0 1 -28 -40 z" fill="url(#g4serum)" opacity="0.8"/>
+          <rect x="120" y="222" width="96" height="238" rx="46" fill="url(#g4rose)"/>
+          <rect x="136" y="232" width="11" height="216" rx="5.5" fill="#FFFFFF" opacity="0.24"/>
+          <circle cx="168" cy="294" r="17" fill="#2A1B18" opacity="0.42"/>
+          <circle cx="168" cy="294" r="9" fill="#F0D3BE" opacity="0.5"/>
+        </g>
+
+        <ellipse cx="150" cy="464" rx="128" ry="10" fill="#241A22" opacity="0.12"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E0D2C4; padding-top: 22px;">
+    <div style="font-family: 'Marcellus', Georgia, serif; font-size: 30px; letter-spacing: 0.06em; color: #4A2B3C;">JULLIEN STELLAR</div>
+    <div style="font-family: 'Space Mono', 'Courier New', monospace; font-size: 17px; letter-spacing: 0.14em; text-transform: uppercase; color: #8E5B48;">jullienstellar.com</div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#B5836E","options":["#B5836E","#4A2B3C","#8E5B48","#D9AE99"]}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#B5836E' };
+  }
+}
+</script>
+</body>
+</html>
