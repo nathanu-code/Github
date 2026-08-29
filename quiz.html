@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply — Grandeur Design Supply</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/funnel.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap"><div class="logo" id="logo"></div></div>
+</header>
+
+<div class="quiz-shell">
+
+  <div class="prog"><div class="prog-fill" id="progFill"></div></div>
+  <div class="prog-meta">
+    <span id="stepNum"></span>
+    <span id="quizTitle"></span>
+  </div>
+
+  <!-- Question screens are generated from config.quiz.steps -->
+  <div id="screens"></div>
+
+  <!-- OUTCOME: qualified -->
+  <section class="screen outcome" id="scr-win">
+    <h2 id="winH"></h2>
+    <p id="winBody"></p>
+    <span class="cta-meta" id="winMeta"></span>
+    <div id="calHost"></div>
+  </section>
+
+  <!-- OUTCOME: disqualified.
+       Routes to a genuine lower-tier offer rather than dead-ending. -->
+  <section class="screen outcome" id="scr-soft">
+    <h2 id="softH"></h2>
+    <p id="softBody"></p>
+    <p id="softBody2"></p>
+    <p><a class="btn" id="softCta" href="#" target="_blank" rel="noopener">…</a></p>
+    <span class="cta-meta" id="softMeta"></span>
+  </section>
+
+</div>
+
+<footer>
+  <p id="foot-copy"></p>
+  <p id="foot-disc"></p>
+</footer>
+
+<div class="loader" id="loader">
+  <div class="spin"></div>
+  <span class="loader-txt">Saving your answers…</span>
+</div>
+
+<script src="config.js"></script>
+<script src="assets/tracking.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>
