@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grandeur Design Supply — Cabinets in Weeks, Not Months</title>
+<meta name="description" content="Semi-custom kitchen cabinetry at builder pricing, warehoused on Oahu. Book a free 30-minute design call.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/funnel.css">
+</head>
+<body>
+
+<!-- Scarcity strip. Always visible, never blocking. -->
+<div class="urgency" id="urgency"></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="logo" id="logo"></div>
+    <div class="rating" id="rating"></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <!-- Stacks the three biggest objections into one line. -->
+      <h1 id="headline"></h1>
+      <p class="subhead" id="subhead"></p>
+      <p><span class="diff" id="diff"></span></p>
+
+      <!-- Progress rail: steps 1-2 are the funnel, step 3 is the proof.
+           Framing proof as a stage makes social proof feel like the
+           visitor's own journey rather than a brag. -->
+      <div class="steps" id="steps"></div>
+
+      <div class="vid-wrap" id="vid-wrap">
+        <div class="vid-border"><div class="vid-inner" id="vid-inner"></div></div>
+      </div>
+
+      <div class="cta-block">
+        <button class="btn" type="button" data-cta>…</button>
+        <span class="cta-meta" data-cta-meta></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters animate from zero on first scroll into view. -->
+  <section class="stats">
+    <div class="wrap"><div class="stats-inner" id="stats"></div></div>
+  </section>
+
+  <section class="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="gal-h"></h2>
+        <p id="gal-sub"></p>
+        <p class="note" id="gal-note"></p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- Reframes the visitor's past failure as a diagnosis, not a verdict. -->
+  <section class="close-sec dark">
+    <div class="wrap">
+      <h2 id="close-h"></h2>
+      <p class="sub" id="close-sub"></p>
+      <p class="body" id="close-body"></p>
+      <button class="btn" type="button" data-cta>…</button>
+      <span class="cta-meta" data-cta-meta></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p id="foot-copy"></p>
+  <p id="foot-disc"></p>
+</footer>
+
+<!-- Appears after 480px of scroll. -->
+<div class="sticky" id="sticky">
+  <button class="btn" type="button" data-cta>…</button>
+  <span class="cta-meta" data-cta-meta></span>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project photo">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="assets/tracking.js"></script>
+<script src="assets/lp.js"></script>
+</body>
+</html>
