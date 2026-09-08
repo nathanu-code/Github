@@ -24,6 +24,8 @@ point-in-time — re-check the source before acting on them.
 | [Solar Charging — What's Reliable](solar-charging-what-works.md) | Proven vs. fake: MPPT price floor, panel wattage derating, tier list |
 | [Home Solar + Battery](home-solar-and-battery.md) | Full vs partial off-grid, real installed costs, and the 2026 tax-credit change |
 | [Aquaponics & RAS Fish Farming](aquaponics.md) | Real yields, sizing ratios, growth rates, and the power-failure problem |
+| [Reselling Alibaba Goods — Margin Math](reselling-economics.md) | Full landed-cost stack, 2026 tariff picture, and which products carry margin |
+| [Seeds & Propagation](seeds-and-propagation.md) | Why F1 hybrids give zero seed independence, and propagating without seed |
 
 ## Water — desalination
 
@@ -46,6 +48,8 @@ point-in-time — re-check the source before acting on them.
 | Product | Price | Captured |
 |---|---|---|
 | [Aquaponics & RAS systems](aquaponics.md) | $292–3,571 | 2026-09-08 |
+| [Grow tents & container vertical farming](grow-tents-and-vertical-farming.md) | $27.80–27,000 | 2026-09-08 |
+| [Seeds & propagation](seeds-and-propagation.md) | — | 2026-09-08 |
 
 ## Cooking & fuel
 
