@@ -12,6 +12,14 @@ Framework: [`reselling-economics.md`](reselling-economics.md). System detail:
 
 **Don't sell Kratky hardware. Sell the consumables, the seedlings, or the food.**
 
+**To be clear about what this does and doesn't say:** Kratky is an excellent way
+to *grow* — see [`hydroponics-vs-aquaponics.md`](hydroponics-vs-aquaponics.md)
+for why it's the easiest method here and the only one with no electrical failure
+mode. It is a bad thing to *manufacture and ship*. Those aren't in tension: it's
+unsellable **because** it's cheap and simple to build, which is the same reason
+it's worth building. Use it as your production method; don't put buckets in a
+shipping container.
+
 A Kratky system *is* a food-grade bucket, a lid with holes, and net pots —
 **$10–15 in materials**, and the instructions are free and public (the
 University of Hawaii CTAHR publication). The simplicity that makes Kratky good
@@ -158,7 +166,10 @@ hard fight for a small grower.
   visible
 - **Living lettuce** sold root-on in the net pot — a different product, and the
   Kratky method produces it naturally
-- **Microgreens** — see below
+- **Microgreens** — see below. Note these are **not** Kratky: microgreens are
+  grown in shallow trays and cut at 7–14 days, before true leaves. Kratky grows
+  greens to maturity over 30–55 days. Both are low-tech and power-light, but
+  they are different techniques
 
 ## The best produce play: microgreens
 
