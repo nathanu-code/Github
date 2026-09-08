@@ -22,6 +22,7 @@ point-in-time — re-check the source before acting on them.
 | [Water Filtration: Rain AND Salt](water-filtration-rain-and-salt.md) | Why no single filter does both, and the two-system architecture |
 | [Sourcing From Chinese Factories](sourcing-from-china.md) | Risk tiers, OEM vs ODM, verification checklist |
 | [Solar Charging — What's Reliable](solar-charging-what-works.md) | Proven vs. fake: MPPT price floor, panel wattage derating, tier list |
+| [Home Solar + Battery](home-solar-and-battery.md) | Full vs partial off-grid, real installed costs, and the 2026 tax-credit change |
 
 ## Water — desalination
 
@@ -53,6 +54,7 @@ point-in-time — re-check the source before acting on them.
 |---|---|---|
 | [Solar generators / power stations](solar-generators.md) | $500–2,000+ | 2026-09-08 |
 | [Solar charging components & panels](solar-charging-what-works.md) | $15–500+ | 2026-09-08 |
+| [Home solar + battery systems](home-solar-and-battery.md) | $10,000–40,000+ | 2026-09-08 |
 
 ---
 
