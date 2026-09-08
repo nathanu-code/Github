@@ -29,6 +29,7 @@ point-in-time — re-check the source before acting on them.
 | [RAS Drum Filters — Margin Breakdown](ras-drum-filter-margins.md) | Verified retail comps, landed cost, and margin by channel (13–43%) |
 | [Crop Selection](crop-selection.md) | Easiest crops by tier, the three nutrients aquaponics always lacks, and where calories come from |
 | [Hydroponics vs Aquaponics](hydroponics-vs-aquaponics.md) | Difficulty ranking, failure modes, and the passive method that needs no power |
+| [Mushrooms & Fresh Protein](mushrooms-and-protein.md) | Mushroom yields and honest protein math, the quail case, and BSFL as the feed loop-closer |
 
 ## Water — desalination
 
@@ -56,6 +57,7 @@ point-in-time — re-check the source before acting on them.
 | [Seeds & propagation](seeds-and-propagation.md) | — | 2026-09-08 |
 | [Crop selection](crop-selection.md) | — | 2026-09-08 |
 | [Hydroponics vs aquaponics](hydroponics-vs-aquaponics.md) | — | 2026-09-08 |
+| [Mushrooms & fresh protein](mushrooms-and-protein.md) | — | 2026-09-08 |
 
 ## Cooking & fuel
 
