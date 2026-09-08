@@ -138,7 +138,7 @@ Invert every factor above:
 
 | Product | Resale verdict |
 |---|---|
-| **RAS drum filters / Bakki showers** | **Best candidate.** High value per kg, B2B buyers, niche, no dominant US brand, spec-driven sale |
+| **RAS drum filters / Bakki showers** | **Best candidate** — modelled in detail in [`ras-drum-filter-margins.md`](ras-drum-filter-margins.md): 13% on Amazon, 26% direct, 43% at premium positioning |
 | **[Koi pond filter, $292](aquaponics.md)** | **Good.** Moderate value, niche, MOQ 1 to test |
 | **[Solar cookers](solar-cookers.md)** | **Decent.** Differentiated, real story, no US incumbent, advertisable — but educate-the-market cost |
 | [Camping stove](alibaba-vooma-camping-stove.md) | **Poor.** Commodity, needs gas certification, crowded |
