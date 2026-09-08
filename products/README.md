@@ -23,6 +23,7 @@ point-in-time — re-check the source before acting on them.
 | [Sourcing From Chinese Factories](sourcing-from-china.md) | Risk tiers, OEM vs ODM, verification checklist |
 | [Solar Charging — What's Reliable](solar-charging-what-works.md) | Proven vs. fake: MPPT price floor, panel wattage derating, tier list |
 | [Home Solar + Battery](home-solar-and-battery.md) | Full vs partial off-grid, real installed costs, and the 2026 tax-credit change |
+| [Aquaponics & RAS Fish Farming](aquaponics.md) | Real yields, sizing ratios, growth rates, and the power-failure problem |
 
 ## Water — desalination
 
@@ -39,6 +40,12 @@ point-in-time — re-check the source before acting on them.
 | Product | Cost | Captured |
 |---|---|---|
 | [Rainwater catchment systems](water-catchment.md) | $400–700 DIY | 2026-09-08 |
+
+## Food production
+
+| Product | Price | Captured |
+|---|---|---|
+| [Aquaponics & RAS systems](aquaponics.md) | $292–3,571 | 2026-09-08 |
 
 ## Cooking & fuel
 
