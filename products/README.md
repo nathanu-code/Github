@@ -21,6 +21,7 @@ point-in-time — re-check the source before acting on them.
 | [Stoves & Fuel for Survival](stoves-and-fuel.md) | Fuel shelf life, cost per BTU, cold-weather limits, stove layers |
 | [Water Filtration: Rain AND Salt](water-filtration-rain-and-salt.md) | Why no single filter does both, and the two-system architecture |
 | [Sourcing From Chinese Factories](sourcing-from-china.md) | Risk tiers, OEM vs ODM, verification checklist |
+| [Solar Charging — What's Reliable](solar-charging-what-works.md) | Proven vs. fake: MPPT price floor, panel wattage derating, tier list |
 
 ## Water — desalination
 
@@ -51,6 +52,7 @@ point-in-time — re-check the source before acting on them.
 | Product | Price | Captured |
 |---|---|---|
 | [Solar generators / power stations](solar-generators.md) | $500–2,000+ | 2026-09-08 |
+| [Solar charging components & panels](solar-charging-what-works.md) | $15–500+ | 2026-09-08 |
 
 ---
 
