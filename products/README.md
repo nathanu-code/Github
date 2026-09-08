@@ -44,6 +44,7 @@ point-in-time — re-check the source before acting on them.
 |---|---|---|
 | [Alibaba — Vooma remote-canister camping stove](alibaba-vooma-camping-stove.md) | $18–23/set, MOQ 10 | 2026-09-08 |
 | [Solar cookers / solar ovens](solar-cookers.md) | $30–290 | 2026-09-08 |
+| [Alibaba — Yihouse 24V/48V DC induction cooker](alibaba-yihouse-dc-induction-cooker.md) | $184, MOQ 1 | 2026-09-08 |
 
 ## Power
 
