@@ -43,6 +43,7 @@ point-in-time — re-check the source before acting on them.
 | Product | Price | Captured |
 |---|---|---|
 | [Alibaba — Vooma remote-canister camping stove](alibaba-vooma-camping-stove.md) | $18–23/set, MOQ 10 | 2026-09-08 |
+| [Solar cookers / solar ovens](solar-cookers.md) | $30–290 | 2026-09-08 |
 
 ## Power
 

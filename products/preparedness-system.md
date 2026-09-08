@@ -18,6 +18,7 @@ Every record here is built on that logic. Consolidated:
 | **Cooking** | Propane, 20 lb tanks | Tanks run dry |
 | | Multi-fuel liquid stove | No liquid fuel available |
 | | Wood stove | (Effectively never) |
+| | Solar cooker | Overcast, night, low sun angle |
 | | Alcohol | Alcohol runs out |
 | **Power** | LFP power station + solar | Extended overcast; unit fails |
 | | (fuel generator, if scoped) | Fuel runs out |
@@ -74,15 +75,17 @@ Sequenced by cost-to-benefit, cheapest high-impact first:
 | 2 | First flush diverter | $20–60 | Highest water-quality leverage per dollar |
 | 3 | Propane burner + 2–3× 20 lb tanks | ~$150–250 | Fuel that never expires, cheapest BTU |
 | 4 | Wood/rocket stove | ~$30–100 | Removes the fuel supply chain entirely |
-| 5 | Rain catchment, DIY IBC totes | $400–700 | Bulk water volume |
-| 6 | Gravity filter (Berkey-class) + spare elements | ~$300+ | Makes catchment potable |
-| 7 | LFP power station + panels | $500–2,000+ | Buy branded; size to a real load list |
-| 8 | Seawater RO desalinator | $400–1,700 | Only if coastal — otherwise skip |
-| 9 | Multi-fuel liquid stove | $150–250 | Fuel flexibility layer |
+| 5 | Panel solar cooker + WAPI | ~$60 | Fuel-free water pasteurisation at 65 °C |
+| 6 | Rain catchment, DIY IBC totes | $400–700 | Bulk water volume |
+| 7 | Gravity filter (Berkey-class) + spare elements | ~$300+ | Makes catchment potable |
+| 8 | LFP power station + panels | $500–2,000+ | Buy branded; size to a real load list |
+| 9 | Seawater RO desalinator | $400–1,700 | Only if coastal — otherwise skip |
+| 10 | Multi-fuel liquid stove | $150–250 | Fuel flexibility layer |
 
-**Items 1–4 total under $500** and cover the two most likely real scenarios
-(loss of grid, loss of water pressure). Items 7–8 are where the money goes and
-should wait until the cheap layers are actually in place.
+**Items 1–5 total roughly $500–550** and cover the two most likely real
+scenarios (loss of grid, loss of water pressure) plus fuel-free water
+disinfection. Items 8–9 are where the money goes and should wait until the
+cheap layers are actually in place.
 
 ## Where the desalinator sits
 
