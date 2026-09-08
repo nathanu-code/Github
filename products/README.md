@@ -27,6 +27,7 @@ point-in-time — re-check the source before acting on them.
 | [Reselling Alibaba Goods — Margin Math](reselling-economics.md) | Full landed-cost stack, 2026 tariff picture, and which products carry margin |
 | [Seeds & Propagation](seeds-and-propagation.md) | Why F1 hybrids give zero seed independence, and propagating without seed |
 | [RAS Drum Filters — Margin Breakdown](ras-drum-filter-margins.md) | Verified retail comps, landed cost, and margin by channel (13–43%) |
+| [Crop Selection](crop-selection.md) | Easiest crops by tier, the three nutrients aquaponics always lacks, and where calories come from |
 
 ## Water — desalination
 
@@ -52,6 +53,7 @@ point-in-time — re-check the source before acting on them.
 | [RAS drum filters — resale margins](ras-drum-filter-margins.md) | $692–6,200 retail | 2026-09-08 |
 | [Grow tents & container vertical farming](grow-tents-and-vertical-farming.md) | $27.80–27,000 | 2026-09-08 |
 | [Seeds & propagation](seeds-and-propagation.md) | — | 2026-09-08 |
+| [Crop selection](crop-selection.md) | — | 2026-09-08 |
 
 ## Cooking & fuel
 
