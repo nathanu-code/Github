@@ -30,6 +30,7 @@ point-in-time — re-check the source before acting on them.
 | [Crop Selection](crop-selection.md) | Easiest crops by tier, the three nutrients aquaponics always lacks, and where calories come from |
 | [Hydroponics vs Aquaponics](hydroponics-vs-aquaponics.md) | Difficulty ranking, failure modes, and the passive method that needs no power |
 | [Mushrooms & Fresh Protein](mushrooms-and-protein.md) | Mushroom yields and honest protein math, the quail case, and BSFL as the feed loop-closer |
+| [Selling Kratky Systems & Fresh Produce](selling-kratky-and-fresh-produce.md) | Why the hardware is unsellable, what to sell instead, and the label claims to avoid |
 
 ## Water — desalination
 
@@ -58,6 +59,7 @@ point-in-time — re-check the source before acting on them.
 | [Crop selection](crop-selection.md) | — | 2026-09-08 |
 | [Hydroponics vs aquaponics](hydroponics-vs-aquaponics.md) | — | 2026-09-08 |
 | [Mushrooms & fresh protein](mushrooms-and-protein.md) | — | 2026-09-08 |
+| [Selling Kratky systems & produce](selling-kratky-and-fresh-produce.md) | — | 2026-09-08 |
 
 ## Cooking & fuel
 
