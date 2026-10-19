@@ -1,5 +1,113 @@
 {
  "items": {
+  "WI-20261019-spain-river-bursts-sweeping-ca": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T09:43:32+00:00",
+   "discovered_by": "research + team upload (manual posting)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "River bursts, sweeping cars through the streets",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Spain",
+    "event_date": "2026-10-19",
+    "location": "Els Poblets",
+    "new_development": false,
+    "sources": [
+     {
+      "name": "La Marina",
+      "url": "https://lamarina.eldiario.es/2026/10/19/una-historica-tromba-de-500-mm-desborda-el-rio-girona-y-convierte-las-calles-en-rios-con-coches-flotando-en-verger-y-els-poblets-y-aisla-pego/"
+     },
+     {
+      "name": "The Local",
+      "url": "https://www.thelocal.es/20261019/latest-at-least-two-dead-as-floods-wreak-havoc-in-eastern-spain"
+     }
+    ],
+    "title": "River bursts, sweeping cars through the streets",
+    "type": "flash flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "La Marina Plaza (compiled resident videos)",
+    "platform": "",
+    "published_date": "2026-10-19",
+    "raw_drive_id": "1qCLtEZyKGXqO45e0eCTWxe3vAKcQqYuG",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "https://lamarina.eldiario.es/2026/10/19/las-impresionantes-imagenes-de-coches-amontonados-y-flotando-en-els-poblets/"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T09:43:32+00:00",
+     "by": "claude",
+     "from": "UNVERIFIED",
+     "note": "verified 2026-10-19",
+     "to": "EVENT_VERIFIED/FOOTAGE_UNVERIFIED"
+    },
+    {
+     "at": "2026-10-19T09:43:32+00:00",
+     "by": "claude",
+     "from": "EVENT_VERIFIED/FOOTAGE_UNVERIFIED",
+     "note": "verified 2026-10-19",
+     "to": "FOOTAGE_VERIFIED/RIGHTS_PENDING"
+    }
+   ],
+   "id": "WI-20261019-spain-river-bursts-sweeping-ca",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "La Marina Plaza / residents of Els Poblets",
+    "evidence_ref": "",
+    "holder": "La Marina Plaza",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "pending - permission not yet requested"
+   },
+   "schedule": {
+    "date": "2026-10-19",
+    "slot": "post3",
+    "time": "19:00"
+   },
+   "score": null,
+   "status": "FOOTAGE_VERIFIED/RIGHTS_PENDING",
+   "verification": {
+    "checks": [
+     "event confirmed by La Marina, The Local, Asharq Al-Awsat",
+     "road sign to Dénia matches Marina Alta location",
+     "published by La Marina on 2026-10-19"
+    ],
+    "concerns": [],
+    "confidence": 0.85,
+    "event_verified": true,
+    "footage_verified": true
+   }
+  },
   "WI-LEGACY-australia-powerful-storm-batters-a": {
    "approval": {
     "at": "",
@@ -1801,6 +1909,6 @@
    }
   }
  },
- "updated_at": "2026-10-19T08:32:49+00:00",
+ "updated_at": "2026-10-19T09:43:32+00:00",
  "version": 1
 }
