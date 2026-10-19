@@ -15,20 +15,44 @@ LIMITS = {"x": 280, "threads": 500, "tiktok": 2200, "instagram_reels": 2200, "in
           "facebook_reels": 2200, "facebook_feed": 2200, "linkedin": 3000, "youtube_title": 100,
           "youtube_description": 5000}
 
-EMOJI = {"flood": "🌊", "flash flood": "🌊", "landslide": "⛰️", "mudslide": "⛰️", "earthquake": "🌍",
-         "tsunami": "🌊", "wildfire": "🔥", "fire": "🔥", "hurricane": "🌀", "typhoon": "🌀", "cyclone": "🌀",
-         "tornado": "🌪️", "storm": "⛈️", "hail": "🧊", "volcano": "🌋", "eruption": "🌋", "avalanche": "🏔️",
-         "blizzard": "❄️", "snowstorm": "❄️", "heatwave": "🌡️", "drought": "☀️", "sinkhole": "🕳️", "rescue": "🚁"}
+# Hazard hashtags, then the matching safety hashtag (house style: #FlashFlood #FloodSafety).
+TYPE_TAGS = {"flood": ["#Flooding", "#FloodSafety"], "flash flood": ["#FlashFlood", "#FloodSafety"],
+             "landslide": ["#Landslide", "#LandslideSafety"], "mudslide": ["#Mudslide", "#LandslideSafety"],
+             "earthquake": ["#Earthquake", "#EarthquakeSafety"], "tsunami": ["#Tsunami", "#TsunamiSafety"],
+             "wildfire": ["#Wildfire", "#WildfireSafety"], "fire": ["#Fire", "#FireSafety"],
+             "hurricane": ["#Hurricane", "#HurricaneSafety"], "typhoon": ["#Typhoon", "#TyphoonSafety"],
+             "cyclone": ["#Cyclone", "#StormSafety"], "tornado": ["#Tornado", "#TornadoSafety"],
+             "storm": ["#Storm", "#StormSafety"], "hail": ["#Hailstorm", "#StormSafety"],
+             "volcano": ["#Volcano", "#VolcanoSafety"], "eruption": ["#VolcanicEruption", "#VolcanoSafety"],
+             "avalanche": ["#Avalanche", "#AvalancheSafety"], "blizzard": ["#Blizzard", "#WinterSafety"],
+             "heatwave": ["#Heatwave", "#HeatSafety"], "sinkhole": ["#Sinkhole", "#DisasterSafety"]}
 
-TYPE_TAGS = {"flood": ["#Flooding", "#FlashFlood"], "flash flood": ["#FlashFlood", "#Flooding"],
-             "landslide": ["#Landslide"], "mudslide": ["#Mudslide", "#Landslide"], "earthquake": ["#Earthquake"],
-             "tsunami": ["#Tsunami"], "wildfire": ["#Wildfire"], "fire": ["#Wildfire"],
-             "hurricane": ["#Hurricane"], "typhoon": ["#Typhoon"], "cyclone": ["#Cyclone"],
-             "tornado": ["#Tornado"], "storm": ["#Storm", "#SevereWeather"], "hail": ["#Hailstorm"],
-             "volcano": ["#Volcano"], "eruption": ["#VolcanicEruption"], "avalanche": ["#Avalanche"],
-             "blizzard": ["#Blizzard"], "heatwave": ["#Heatwave"], "sinkhole": ["#Sinkhole"]}
+BRAND_TAG = "#WorldUnignored"   # as used on the posted captions (Sep 2026)
+PREP_TAG = "#DisasterPreparedness"
+AUTHORITIES_LINE = "Follow instructions from local authorities during an active emergency."
 
-BASE_TAGS = ["#WorldIgnored", "#NaturalDisasters", "#ExtremeWeather"]
+# Caption safety advice (sentence case). Reviewers can override per video with edit.caption_safety.
+CAPTION_SAFETY = {
+    "flood": "Move to higher ground when told to evacuate. Stay away from riverbanks and never enter floodwater.",
+    "flash flood": "Never drive or walk into floodwater; just a few inches of moving water can sweep a car away. "
+                   "Move to higher ground and stay away from riverbanks.",
+    "landslide": "Leave slopes and valleys when authorities advise. Listen for unusual rumbling and stay away from the slide area.",
+    "mudslide": "Leave slopes and valleys when authorities advise. Listen for unusual rumbling and stay away from the slide area.",
+    "earthquake": "During shaking: Drop • Cover • Hold On. Stay out of damaged buildings after the shaking stops.",
+    "tsunami": "If the ground shakes near the coast or the sea pulls back, move to high ground immediately and stay there.",
+    "wildfire": "Leave early when told to evacuate. Don't wait to see the flames.",
+    "fire": "If you see a building fire, move away from smoke, use the nearest safe exit, and call emergency services.",
+    "hurricane": "Follow evacuation orders. Storm surge and flooding cause most hurricane deaths.",
+    "typhoon": "Follow evacuation orders. Storm surge and flooding cause most typhoon deaths.",
+    "cyclone": "Follow evacuation orders. Storm surge and flooding cause most cyclone deaths.",
+    "tornado": "Shelter in an interior room on the lowest floor, away from windows. A car is not a safe shelter.",
+    "storm": "Stay indoors until the storm passes and keep away from fallen trees and power lines.",
+    "hail": "Take cover indoors and stay away from windows until the hail stops.",
+    "volcano": "Respect volcanic exclusion zones and evacuation orders. Never enter a restricted crater area.",
+    "eruption": "Respect volcanic exclusion zones and evacuation orders. Never enter a restricted crater area.",
+    "avalanche": "Check avalanche warnings before heading into the mountains and avoid closed slopes.",
+}
+
 
 # Words that signal casualty/damage claims; such sentences need a source.
 _CLAIM = re.compile(r"\b(dead|died|killed|deaths?|fatalit|missing|injured|casualt|evacuat|displaced|destroyed|"
@@ -61,16 +85,23 @@ def _country_tag(country: str) -> str:
     return "#" + re.sub(r"[^A-Za-z0-9ÀÿÜüÖöÇçŞşĞğİı]", "", country.title())
 
 
+def _place_tag(location: str) -> str:
+    first = location.split(",")[0]
+    return "#" + re.sub(r"[^A-Za-z0-9ÀÿÜüÖöÇçŞşĞğİı]", "", first.title())
+
+
 def hashtags(item: dict, n: int = 6) -> list[str]:
-    t = item["event"]["type"].lower()
-    tags = BASE_TAGS[:1] + TYPE_TAGS.get(t, ["#" + t.title().replace(" ", "")]) + [_country_tag(item["event"]["country"])]
-    tags += BASE_TAGS[1:] + item["event"].get("extra_tags", [])
+    """House order: #Country #Place #Hazard #HazardSafety #DisasterPreparedness #WorldUnignored."""
+    e = item["event"]
+    t = e["type"].lower()
+    hazard = TYPE_TAGS.get(t, ["#" + t.title().replace(" ", ""), "#DisasterSafety"])
+    tags = [_country_tag(e["country"]), _place_tag(e["location"])] + hazard + e.get("extra_tags", []) + [PREP_TAG]
     seen, out = set(), []
     for x in tags:
         if x.lower() not in seen:
             seen.add(x.lower())
             out.append(x)
-    return out[:n]
+    return out[: n - 1] + [BRAND_TAG]
 
 
 def _require(item: dict) -> None:
@@ -92,15 +123,27 @@ def _facts(item: dict) -> list[str]:
     return [f["text"].strip() for f in item["event"].get("facts", []) if f.get("text") and f.get("source")]
 
 
-def _source_names(item: dict, k: int = 3) -> str:
-    names = [s.get("name") or s.get("url", "") for s in item["event"]["sources"][:k]]
-    return ", ".join(n for n in names if n)
+def _fact_sources(item: dict, k: int = 2, links: bool = True) -> str:
+    srcs = [s for s in item["event"]["sources"][:k] if s.get("name") or s.get("url")]
+    parts = [f"{s.get('name') or s['url']} — {s['url']}" if links and s.get("url") and s.get("name")
+             else (s.get("name") or s["url"]) for s in srcs]
+    label = "Fact source" if len(parts) == 1 else "Fact sources"
+    return f"{label}: " + " ; ".join(parts)
 
 
-def _emoji(item: dict) -> str:
-    t = item["event"]["type"].lower()
-    lead = item["event"].get("emoji") or EMOJI.get(t, "⚠️")
-    return lead
+def caption_safety(item: dict) -> str:
+    return (item["edit"].get("caption_safety")
+            or CAPTION_SAFETY.get(item["event"]["type"].lower(), "Follow official warnings and evacuation orders."))
+
+
+def _dated_lead(summary: str, when: str) -> str:
+    """House captions open with the date: "On 19 October 2026, a flash flood ..."."""
+    if summary.lower().startswith("on ") or when in summary:
+        return summary
+    first, _, rest = summary.partition(" ")
+    if first in ("The", "A", "An"):
+        return f"On {when}, {first.lower()} {rest}"
+    return summary
 
 
 def _clip(text: str, limit: int) -> str:
@@ -118,46 +161,64 @@ def _x_len(text: str) -> int:
 
 
 def build(item: dict) -> dict:
+    """Captions in the house style taken from the posted World Ignored captions:
+
+    HEADLINE (uppercase, no emoji)
+    On <date>, <what happened, from the sourced summary and facts>
+    📍 <place>
+    <safety advice>
+    Follow instructions from local authorities during an active emergency.
+    🎥 <filmer / credit>
+    Fact source: <name> — <url>
+    #Country #Place #Hazard #HazardSafety #DisasterPreparedness #WorldUnignored
+    """
     _require(item)
     e = item["event"]
-    head = e["title"].upper().rstrip(".")
-    emoji = _emoji(item)
+    head = (item["edit"].get("headline") or e["title"]).upper().rstrip(".")
     place = e["location"] if e["country"].lower() in e["location"].lower() else f"{e['location']}, {e['country']}"
     when = human_date(e["event_date"])
-    summary = e["summary"].strip()
-    facts = _facts(item)
+    lead = _dated_lead(e["summary"].strip(), when)
+    dated = when in lead
+    place_line = f"📍 {place}" + ("" if dated else f" · {when}")
+    body = " ".join([lead] + _facts(item))
+    safety = caption_safety(item)
     credit = item["rights"]["attribution"].strip()
-    sources = _source_names(item)
+    credit_line = f"🎥 {credit}"
     tags = hashtags(item)
 
-    body = summary + ("\n\n" + "\n".join(facts) if facts else "")
-    long_caption = (f"{emoji} {head}\n\n{body}\n\n📍 {place}\n📅 {when}\n\n"
-                    f"Footage: {credit}\nSources: {sources}\n\n{' '.join(tags)}")
+    long_caption = (f"{head}\n\n{body}\n\n{place_line}\n{safety}\n{AUTHORITIES_LINE}\n\n"
+                    f"{credit_line}\n{_fact_sources(item)}\n\n{' '.join(tags)}")
 
-    first_sentence = re.split(r"(?<=[.!?])\s+", summary)[0]
-    tiktok = (f"{emoji} {head}\n\n{first_sentence}\n\n📍 {place} | 📅 {when}\n"
-              f"Footage: {credit}\n\n{' '.join(tags[:5])}")
+    # TikTok and Threads: links aren't clickable or hurt reach, so sources are named without URLs.
+    tiktok = (f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n\n{credit_line}\n"
+              f"{_fact_sources(item, links=False)}\n\n{' '.join(tags[:4] + tags[-1:])}")
 
-    threads = f"{emoji} {head}\n\n{first_sentence}\n\n📍 {place} · {when}\nFootage: {credit}\n\n{tags[0]}"
+    threads = f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n\n{credit_line}\n\n{tags[-1]}"
     if len(threads) > LIMITS["threads"]:
-        threads = f"{emoji} {head}\n\n📍 {place} · {when}\nFootage: {credit}\n\n{tags[0]}"
+        threads = f"{head}\n\n{place_line}\n{safety}\n\n{credit_line}\n\n{tags[-1]}"
 
-    # X: no links (they cost extra and hurt reach), short credit, two tags.
-    x = f"{emoji} {head}\n\n📍 {place} · {when}\n🎥 {credit}\n\n{tags[0]} {tags[1]}"
-    if _x_len(x) > LIMITS["x"]:
-        x = f"{emoji} {head}\n📍 {place} · {when}\n🎥 {credit}"
-    if _x_len(x) > LIMITS["x"]:
+    # X: no links (they cost extra and hurt reach), one safety hashtag. Shrinks until it fits.
+    first_safety = re.split(r"(?<=[.!?;])\s+", safety)[0].rstrip(";.") + "."
+    hazard_safety = tags[3] if len(tags) > 3 else tags[-1]
+    x_forms = [f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n🎥 {credit}\n\n{hazard_safety}",
+               f"{head}\n\n{place_line}\n{safety}\n🎥 {credit}\n\n{hazard_safety}",
+               f"{head}\n\n{place_line}\n{first_safety}\n🎥 {credit}\n\n{hazard_safety}",
+               f"{head}\n{place_line}\n🎥 {credit}"]
+    x = next((f for f in x_forms if _x_len(f) <= LIMITS["x"]), None)
+    if x is None:
         raise CaptionError("X caption over 280 even in short form; shorten the headline")
 
-    linkedin = (f"{head}\n\n{body}\n\n📍 {place}\n📅 {when}\n\nFootage: {credit}\nSources: {sources}\n\n"
-                f"{' '.join(tags[:4])}")
+    linkedin = (f"{head}\n\n{body}\n\n{place_line}\n\nPreparedness matters when seconds count. {safety}\n"
+                f"{AUTHORITIES_LINE}\n\n{credit_line}\n{_fact_sources(item)}\n\n{' '.join(tags[2:])}")
 
-    yt_title = f"{e['title'].strip().rstrip('.')} | {e['location'].split(',')[0].strip()} #Shorts"
-    if len(yt_title) > LIMITS["youtube_title"]:
-        yt_title = f"{e['title'].strip().rstrip('.')}"[: LIMITS["youtube_title"] - 8].rstrip() + " #Shorts"
-    src_lines = "\n".join(f"- {s.get('name','')}: {s.get('url','')}" for s in e["sources"][:5])
-    yt_desc = (f"{head}\n\n{body}\n\n📍 {place}\n📅 {when}\n\nFootage: {credit}\nSources:\n{src_lines}\n\n"
-               f"World Ignored covers natural disasters around the world.\n\n{' '.join(tags)}")
+    title = (e.get("youtube_title") or e["title"]).strip().rstrip(".")
+    title = title if title != title.upper() else title.title()
+    yt_title = f"{title} | {e['location'].split(',')[0].strip()}"
+    if len(yt_title) > LIMITS["youtube_title"] - 8:
+        yt_title = title[: LIMITS["youtube_title"] - 8].rstrip()
+    yt_title += " #Shorts"
+    yt_desc = (f"{body}\n\n{place_line}\n{safety}\n{AUTHORITIES_LINE}\n\n{credit_line}\n{_fact_sources(item, k=5)}\n\n"
+               f"{' '.join(tags + ['#Shorts'])}")
 
     caps = {
         "instagram_reels": _clip(long_caption, LIMITS["instagram_reels"]),

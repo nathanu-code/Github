@@ -160,8 +160,10 @@ def test_captions_use_only_verified_fields():
     assert "HOUSE COLLAPSES INTO FLOODWATERS" in caps["instagram_reels"]
     assert "📍 Sakarya, Türkiye" in caps["instagram_reels"]
     assert "October 15, 2026" in caps["instagram_reels"]
-    assert "Footage: Jane Filmer" in caps["instagram_reels"]
-    assert "#WorldIgnored" in caps["instagram_reels"]
+    assert "🎥 Jane Filmer" in caps["instagram_reels"]
+    assert caps["instagram_reels"].rstrip().endswith("#WorldUnignored")
+    assert "Follow instructions from local authorities" in caps["instagram_reels"]
+    assert "Fact source" in caps["instagram_reels"]
     assert len(caps["threads"]) <= 500 and captions._x_len(caps["x"]) <= 280
     assert "http" not in caps["x"]
     assert len(caps["youtube_title"]) <= 100
