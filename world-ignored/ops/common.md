@@ -6,7 +6,13 @@ git clone -q -b world-ignored-ops https://github.com/nathanu-code/Github wi-ops 
 bash scripts/setup.sh
 python -m wi health
 ```
-Read the last ~30 messages of `#world-ignored` (`slack_read_channel`, channel `C0C7UL356KF`). If an
+**Slack access.** If `SLACK_BOT_TOKEN` is set (`wi health` → `slack_bot_token: true`), Python posts and
+reads Slack itself: run `python -m wi slack-commands`, use `python -m wi approvals <id>` without a file,
+and skip the outbox steps below (nothing gets queued). If neither the bot token nor the Slack connector
+tools (`slack_send_message` etc.) are available, Slack can't be reached: still do the rest of the run,
+commit state, and end your run with a clear summary saying Slack delivery was impossible.
+
+Otherwise (connector mode), read the last ~30 messages of `#world-ignored` (`slack_read_channel`, channel `C0C7UL356KF`). If an
 approver (Nathan `U0A4HF5FN6S`, Admin `U0A4HF78STG`) has posted `WI STOP`, `WI PAUSE` or `WI RESUME`
 since the last run, apply it:
 `python -m wi control stop|pause|resume --by <Name> --reason "<their message>"`.

@@ -20,7 +20,7 @@ import requests
 from . import config, models
 from .models import now_iso
 
-OUTBOX = config.WORK_DIR / "outbox"
+OUTBOX = config.STATE_DIR / "outbox"   # persisted with state so undelivered messages survive the run
 _SECRETISH = re.compile(r"(xox[abpr]-[\w-]+|EAA[\w]{20,}|ya29\.[\w.-]+|sk-[\w-]{20,}|AIza[\w-]{30,})")
 
 
@@ -88,6 +88,28 @@ def mark_sent(msg_id: str, ts: str) -> None:
     sent[key] = {"ts": ts, "at": now_iso(), "kind": msg["kind"], "item_id": msg.get("item_id")}
     sent_log.write_text(json.dumps(sent, indent=1))
     p.rename(p.with_suffix(".sent"))
+
+
+def read_thread(ts: str) -> list[dict]:
+    """Thread replies via the bot token: [{user, ts, text}]."""
+    token = config.env("SLACK_BOT_TOKEN")
+    if not token:
+        raise RuntimeError("SLACK_BOT_TOKEN not set; read the thread with the Slack connector instead")
+    r = requests.get("https://slack.com/api/conversations.replies", headers={"Authorization": f"Bearer {token}"},
+                     params={"channel": channel(), "ts": ts, "limit": 200}, timeout=30).json()
+    if not r.get("ok"):
+        raise RuntimeError(f"Slack error: {r.get('error')}")
+    return [{"user": m.get("user"), "ts": m["ts"], "text": m.get("text", "")} for m in r["messages"][1:]]
+
+
+def recent_commands(limit: int = 50) -> list[dict]:
+    """Recent channel messages (bot mode), used for WI STOP / WI PAUSE / WI RESUME."""
+    token = config.env("SLACK_BOT_TOKEN")
+    if not token:
+        return []
+    r = requests.get("https://slack.com/api/conversations.history", headers={"Authorization": f"Bearer {token}"},
+                     params={"channel": channel(), "limit": limit}, timeout=30).json()
+    return [{"user": m.get("user"), "ts": m["ts"], "text": m.get("text", "")} for m in r.get("messages", [])]
 
 
 def review_ts(item_id: str) -> str | None:

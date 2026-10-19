@@ -256,7 +256,13 @@ def cmd_approvals(a):
     from . import approvals
     store = Store()
     it = store.get(a.id)
-    msgs = json.loads(Path(a.thread).read_text())
+    if a.thread:
+        msgs = json.loads(Path(a.thread).read_text())
+    else:   # bot mode: read the review thread directly
+        ts = slack.review_ts(it["id"])
+        if not ts:
+            sys.exit("no review package ts on record for this item")
+        msgs = slack.read_thread(ts)
     try:
         res = approvals.apply(it, msgs)
     except models.GateError as exc:
@@ -315,6 +321,26 @@ def cmd_health(a):
             "platforms": connection_status(),
             "items_by_status": {s: len(store.by_status(s)) for s in models.STATUSES if store.by_status(s)},
             "outbox": sorted(p.name for p in slack.OUTBOX.glob("*.json")) if slack.OUTBOX.exists() else []})
+
+
+def cmd_slack_commands(a):
+    """Apply WI STOP / WI PAUSE / WI RESUME from approvers (bot mode)."""
+    import re
+    store = Store()
+    approvers = config.settings()["slack"]["approvers"]
+    last = store.control().get("last_command_ts", "0")
+    applied = []
+    for m in sorted(slack.recent_commands(), key=lambda m: float(m["ts"])):
+        if float(m["ts"]) <= float(last) or m.get("user") not in approvers:
+            continue
+        cmd = re.match(r"^\s*WI\s+(STOP|PAUSE|RESUME)\b", m["text"], re.I)
+        if not cmd:
+            continue
+        flags = {"STOP": {"emergency_stop": True, "paused": True}, "PAUSE": {"paused": True},
+                 "RESUME": {"paused": False, "emergency_stop": False}}[cmd.group(1).upper()]
+        store.set_control(**flags, reason=m["text"][:200], by=approvers[m["user"]], last_command_ts=m["ts"])
+        applied.append((approvers[m["user"]], cmd.group(1).upper()))
+    _print({"applied": applied, "control": store.control()})
 
 
 def cmd_control(a):
@@ -385,7 +411,7 @@ def main(argv=None):
     add("edit", cmd_edit, (["id"], {}), (["--presets"], {}), (["--fit"], {"default": "fill", "choices": ["fill", "blur"]}))
     add("captions", cmd_captions, (["id"], {}))
     add("package", cmd_package, (["id"], {}), (["--slot"], {}), (["--date"], {}), (["--platforms"], {}))
-    add("approvals", cmd_approvals, (["id"], {}), (["thread"], {}))
+    add("approvals", cmd_approvals, (["id"], {}), (["thread"], {"nargs": "?"}))
     add("publish-slot", cmd_publish_slot, (["slot"], {}), (["--dry-run"], {"action": "store_true"}))
     add("record-post", cmd_record_post, (["id"], {}), (["platform"], {}), (["url"], {}), (["--post-id"], {}),
         (["--by"], {"default": "team"}))
@@ -395,6 +421,7 @@ def main(argv=None):
     add("control", cmd_control, (["action"], {"choices": ["pause", "resume", "stop", "unstop"]}),
         (["--reason"], {}), (["--by"], {"default": "claude"}))
     add("outbox", cmd_outbox)
+    add("slack-commands", cmd_slack_commands)
     add("slack-sent", cmd_slack_sent, (["id"], {}), (["ts"], {}))
     add("tracker-csv", cmd_tracker_csv)
     add("sheet-sync", cmd_sheet_sync, (["--with-analytics"], {"action": "store_true"}))
