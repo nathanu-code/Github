@@ -29,28 +29,26 @@ TYPE_TAGS = {"flood": ["#Flooding", "#FloodSafety"], "flash flood": ["#FlashFloo
 
 BRAND_TAG = "#WorldUnignored"   # as used on the posted captions (Sep 2026)
 PREP_TAG = "#DisasterPreparedness"
-AUTHORITIES_LINE = "Follow instructions from local authorities during an active emergency."
 
 # Caption safety advice (sentence case). Reviewers can override per video with edit.caption_safety.
 CAPTION_SAFETY = {
-    "flood": "Move to higher ground when told to evacuate. Stay away from riverbanks and never enter floodwater.",
-    "flash flood": "Never drive or walk into floodwater; just a few inches of moving water can sweep a car away. "
-                   "Move to higher ground and stay away from riverbanks.",
-    "landslide": "Leave slopes and valleys when authorities advise. Listen for unusual rumbling and stay away from the slide area.",
-    "mudslide": "Leave slopes and valleys when authorities advise. Listen for unusual rumbling and stay away from the slide area.",
-    "earthquake": "During shaking: Drop • Cover • Hold On. Stay out of damaged buildings after the shaking stops.",
-    "tsunami": "If the ground shakes near the coast or the sea pulls back, move to high ground immediately and stay there.",
-    "wildfire": "Leave early when told to evacuate. Don't wait to see the flames.",
-    "fire": "If you see a building fire, move away from smoke, use the nearest safe exit, and call emergency services.",
-    "hurricane": "Follow evacuation orders. Storm surge and flooding cause most hurricane deaths.",
-    "typhoon": "Follow evacuation orders. Storm surge and flooding cause most typhoon deaths.",
-    "cyclone": "Follow evacuation orders. Storm surge and flooding cause most cyclone deaths.",
-    "tornado": "Shelter in an interior room on the lowest floor, away from windows. A car is not a safe shelter.",
-    "storm": "Stay indoors until the storm passes and keep away from fallen trees and power lines.",
-    "hail": "Take cover indoors and stay away from windows until the hail stops.",
-    "volcano": "Respect volcanic exclusion zones and evacuation orders. Never enter a restricted crater area.",
-    "eruption": "Respect volcanic exclusion zones and evacuation orders. Never enter a restricted crater area.",
-    "avalanche": "Check avalanche warnings before heading into the mountains and avoid closed slopes.",
+    "flood": "Never enter floodwater. Move to higher ground.",
+    "flash flood": "Never drive or walk into floodwater. Move to higher ground.",
+    "landslide": "Leave slopes and valleys when authorities advise.",
+    "mudslide": "Leave slopes and valleys when authorities advise.",
+    "earthquake": "During shaking: Drop • Cover • Hold On.",
+    "tsunami": "If the sea pulls back or the ground shakes, move to high ground now.",
+    "wildfire": "Leave early when told to evacuate.",
+    "fire": "Stay away from smoke and use the nearest safe exit.",
+    "hurricane": "Follow evacuation orders and stay away from storm surge.",
+    "typhoon": "Follow evacuation orders and stay away from storm surge.",
+    "cyclone": "Follow evacuation orders and stay away from storm surge.",
+    "tornado": "Shelter in an interior room away from windows. A car is not safe.",
+    "storm": "Stay indoors and keep away from fallen trees and power lines.",
+    "hail": "Take cover indoors, away from windows.",
+    "volcano": "Respect exclusion zones and evacuation orders.",
+    "eruption": "Respect exclusion zones and evacuation orders.",
+    "avalanche": "Check avalanche warnings and avoid closed slopes.",
 }
 
 
@@ -161,13 +159,12 @@ def _x_len(text: str) -> int:
 
 
 def build(item: dict) -> dict:
-    """Captions in the house style taken from the posted World Ignored captions:
+    """Short captions in the house style of the posted World Ignored captions:
 
     HEADLINE (uppercase, no emoji)
-    On <date>, <what happened, from the sourced summary and facts>
+    On <date>, <what happened> [+ the first sourced fact]
     📍 <place>
-    <safety advice>
-    Follow instructions from local authorities during an active emergency.
+    <one-line safety advice>
     🎥 <filmer / credit>
     Fact source: <name> — <url>
     #Country #Place #Hazard #HazardSafety #DisasterPreparedness #WorldUnignored
@@ -178,38 +175,32 @@ def build(item: dict) -> dict:
     place = e["location"] if e["country"].lower() in e["location"].lower() else f"{e['location']}, {e['country']}"
     when = human_date(e["event_date"])
     lead = _dated_lead(e["summary"].strip(), when)
-    dated = when in lead
-    place_line = f"📍 {place}" + ("" if dated else f" · {when}")
-    body = " ".join([lead] + _facts(item))
+    place_line = f"📍 {place}" + ("" if when in lead else f" · {when}")
+    body = " ".join([lead] + _facts(item)[:1])
     safety = caption_safety(item)
-    credit = item["rights"]["attribution"].strip()
-    credit_line = f"🎥 {credit}"
+    credit = f"🎥 {item['rights']['attribution'].strip()}"
     tags = hashtags(item)
+    source = _fact_sources(item, k=1)
 
-    long_caption = (f"{head}\n\n{body}\n\n{place_line}\n{safety}\n{AUTHORITIES_LINE}\n\n"
-                    f"{credit_line}\n{_fact_sources(item)}\n\n{' '.join(tags)}")
+    long_caption = f"{head}\n\n{body}\n\n{place_line}\n{safety}\n\n{credit}\n{source}\n\n{' '.join(tags)}"
 
-    # TikTok and Threads: links aren't clickable or hurt reach, so sources are named without URLs.
-    tiktok = (f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n\n{credit_line}\n"
-              f"{_fact_sources(item, links=False)}\n\n{' '.join(tags[:4] + tags[-1:])}")
-
-    threads = f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n\n{credit_line}\n\n{tags[-1]}"
+    # TikTok and Threads: links aren't clickable or hurt reach, so the source is named without a URL.
+    tiktok = (f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n\n{credit}\n{_fact_sources(item, k=1, links=False)}\n\n"
+              f"{' '.join(tags[:4] + tags[-1:])}")
+    threads = f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n{credit}\n\n{tags[-1]}"
     if len(threads) > LIMITS["threads"]:
-        threads = f"{head}\n\n{place_line}\n{safety}\n\n{credit_line}\n\n{tags[-1]}"
+        threads = f"{head}\n\n{place_line}\n{safety}\n{credit}\n\n{tags[-1]}"
 
     # X: no links (they cost extra and hurt reach), one safety hashtag. Shrinks until it fits.
-    first_safety = re.split(r"(?<=[.!?;])\s+", safety)[0].rstrip(";.") + "."
     hazard_safety = tags[3] if len(tags) > 3 else tags[-1]
-    x_forms = [f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n🎥 {credit}\n\n{hazard_safety}",
-               f"{head}\n\n{place_line}\n{safety}\n🎥 {credit}\n\n{hazard_safety}",
-               f"{head}\n\n{place_line}\n{first_safety}\n🎥 {credit}\n\n{hazard_safety}",
-               f"{head}\n{place_line}\n🎥 {credit}"]
+    x_forms = [f"{head}\n\n{lead}\n\n{place_line}\n{safety}\n{credit}\n\n{hazard_safety}",
+               f"{head}\n\n{place_line}\n{safety}\n{credit}\n\n{hazard_safety}",
+               f"{head}\n{place_line}\n{credit}"]
     x = next((f for f in x_forms if _x_len(f) <= LIMITS["x"]), None)
     if x is None:
         raise CaptionError("X caption over 280 even in short form; shorten the headline")
 
-    linkedin = (f"{head}\n\n{body}\n\n{place_line}\n\nPreparedness matters when seconds count. {safety}\n"
-                f"{AUTHORITIES_LINE}\n\n{credit_line}\n{_fact_sources(item)}\n\n{' '.join(tags[2:])}")
+    linkedin = f"{head}\n\n{body}\n\n{place_line}\n{safety}\n\n{credit}\n{source}\n\n{' '.join(tags[2:])}"
 
     title = (e.get("youtube_title") or e["title"]).strip().rstrip(".")
     title = title if title != title.upper() else title.title()
@@ -217,8 +208,7 @@ def build(item: dict) -> dict:
     if len(yt_title) > LIMITS["youtube_title"] - 8:
         yt_title = title[: LIMITS["youtube_title"] - 8].rstrip()
     yt_title += " #Shorts"
-    yt_desc = (f"{body}\n\n{place_line}\n{safety}\n{AUTHORITIES_LINE}\n\n{credit_line}\n{_fact_sources(item, k=5)}\n\n"
-               f"{' '.join(tags + ['#Shorts'])}")
+    yt_desc = f"{body}\n\n{place_line}\n{safety}\n\n{credit}\n{source}\n\n{' '.join(tags + ['#Shorts'])}"
 
     caps = {
         "instagram_reels": _clip(long_caption, LIMITS["instagram_reels"]),
