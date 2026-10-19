@@ -157,7 +157,7 @@ def cmd_ingest(a):
                          orientation="vertical" if pr.display_size[1] > pr.display_size[0] else "horizontal",
                          resolution=f"{pr.display_size[0]}x{pr.display_size[1]}")
     if drive and not it["footage"].get("raw_drive_id"):
-        up = drive.upload(dest, "Raw Videos", f"{it['id']}_raw{dest.suffix}")
+        up = drive.upload(dest, "Raw Videos", f"{it['id']}_raw{dest.suffix}", sub=it["id"])
         it["footage"]["raw_drive_id"] = up["id"]
     store.save(it)
     _print({"id": it["id"], "raw": str(dest), "duration": pr.duration, "size": pr.display_size, "audio": pr.has_audio,
@@ -190,7 +190,7 @@ def cmd_edit(a):
              "closing": {k: meta["closing"][k] for k in ("rect", "zone", "overlap")}, "preview": qc[name]["preview"]}
         if drive:
             folder = __import__("wi.storage", fromlist=["PRESET_FOLDER"]).PRESET_FOLDER[name]
-            up = drive.upload(meta["path"], folder)
+            up = drive.upload(meta["path"], folder, sub=it["id"])
             o.update(drive_id=up["id"], drive_url=up.get("webViewLink"))
             pv = drive.upload(qc[name]["preview"], "Video Previews")
             o["preview_url"] = pv.get("webViewLink")
