@@ -27,8 +27,9 @@ Set up with Google OAuth as **admin@grandeurdesignsupply.com** (admin@ has Edito
   environment variables `GOOGLE_OAUTH_CLIENT_ID`, `GOOGLE_OAUTH_CLIENT_SECRET`,
   `GOOGLE_OAUTH_REFRESH_TOKEN` in the cloud environment "Greg YouTube Cloud fare" (edit it from
   claude.ai/code → environment picker under the prompt box → gear → Edit).
-- Root folder: `*World Ignored` (`18qBzGnXMVRlgTQlq1YRVk2aHpxtqKwGX`); the 10 automation subfolders
-  and the Content Tracker sheet live inside it (ids in `state/drive.json`).
+- Folders: `*World Ignored/Automated Posting` (`12ykA8x4JIdFVsN-ytneDQtQHE8xrHZQL`) holds the 10
+  automation subfolders (ids in `state/drive.json`); the Content Tracker sheet sits directly in
+  `*World Ignored` (`18qBzGnXMVRlgTQlq1YRVk2aHpxtqKwGX`).
 - Check any time: `python -m wi drive-check <folder id> --upload-test`.
 - Revoke: myaccount.google.com/permissions (as admin@) → World Ignored Automation → Remove access.
   To rotate the client secret: Cloud Console → Google Auth Platform → Clients → add a new secret,

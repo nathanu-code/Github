@@ -85,7 +85,7 @@ editing:
   video_crf: 18
 
 google:
-  drive_root_folder: 18qBzGnXMVRlgTQlq1YRVk2aHpxtqKwGX      # "*World Ignored" (owner: Faith); subfolder ids in state/drive.json
+  drive_root_folder: 12ykA8x4JIdFVsN-ytneDQtQHE8xrHZQL      # "*World Ignored/Automated Posting"; subfolder ids in state/drive.json
   tracker_sheet_id: 1K8YbsIpXGRQA9Raib4P3JloMZhUJfXvDFVGh6iFCCSE   # "World Ignored — Content Tracker"
 
 control:
