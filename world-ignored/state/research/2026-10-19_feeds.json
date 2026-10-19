@@ -1,0 +1,440 @@
+{
+ "events": [
+  {
+   "feed": "USGS",
+   "id": "us6000u38g",
+   "type": "earthquake",
+   "title": "M 5.1 - 129 km SSE of Kokopo, Papua New Guinea",
+   "country": "Papua New Guinea",
+   "location": "129 km SSE of Kokopo, Papua New Guinea",
+   "lat": -5.4567,
+   "lon": 152.6162,
+   "date": "2026-10-18",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u38g",
+   "severity": {
+    "magnitude": 5.1,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u37h",
+   "type": "earthquake",
+   "title": "M 5.2 - 71 km ESE of ‘Ohonua, Tonga",
+   "country": "Tonga",
+   "location": "71 km ESE of ‘Ohonua, Tonga",
+   "lat": -21.541,
+   "lon": -174.2956,
+   "date": "2026-10-18",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u37h",
+   "severity": {
+    "magnitude": 5.2,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u34e",
+   "type": "earthquake",
+   "title": "M 5.2 - 55 km NNW of Ruteng, Indonesia",
+   "country": "Indonesia",
+   "location": "55 km NNW of Ruteng, Indonesia",
+   "lat": -8.1449,
+   "lon": 120.2734,
+   "date": "2026-10-18",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u34e",
+   "severity": {
+    "magnitude": 5.2,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u309",
+   "type": "earthquake",
+   "title": "M 5.2 - 86 km SW of Brisas Barra de Suchiate, Mexico",
+   "country": "Mexico",
+   "location": "86 km SW of Brisas Barra de Suchiate, Mexico",
+   "lat": 14.0469,
+   "lon": -92.8552,
+   "date": "2026-10-17",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u309",
+   "severity": {
+    "magnitude": 5.2,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u2y1",
+   "type": "earthquake",
+   "title": "M 5.7 - 48 km WNW of Khuzdar, Pakistan",
+   "country": "Pakistan",
+   "location": "48 km WNW of Khuzdar, Pakistan",
+   "lat": 28.0179,
+   "lon": 66.1708,
+   "date": "2026-10-17",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
+   "severity": {
+    "magnitude": 5.7,
+    "alert": "yellow",
+    "tsunami": 0,
+    "felt": 2
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u2v8",
+   "type": "earthquake",
+   "title": "M 5.2 - off the coast of Ecuador",
+   "country": "off the coast of Ecuador",
+   "location": "off the coast of Ecuador",
+   "lat": 1.2955,
+   "lon": -85.2725,
+   "date": "2026-10-16",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2v8",
+   "severity": {
+    "magnitude": 5.2,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u2q5",
+   "type": "earthquake",
+   "title": "M 5.0 - Auckland Islands, New Zealand region",
+   "country": "New Zealand region",
+   "location": "Auckland Islands, New Zealand region",
+   "lat": -49.8826,
+   "lon": 163.4041,
+   "date": "2026-10-16",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2q5",
+   "severity": {
+    "magnitude": 5,
+    "alert": null,
+    "tsunami": 0,
+    "felt": null
+   }
+  },
+  {
+   "feed": "USGS",
+   "id": "us6000u2mq",
+   "type": "earthquake",
+   "title": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+   "country": "Russia",
+   "location": "76 km NE of Ozernovskiy, Russia",
+   "lat": 51.9848,
+   "lon": 157.2701,
+   "date": "2026-10-16",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+   "severity": {
+    "magnitude": 6.9,
+    "alert": "green",
+    "tsunami": 0,
+    "felt": 2
+   }
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25388",
+   "type": "wildfire",
+   "title": "Wildfire in Australia 1032891",
+   "country": "",
+   "location": "Wildfire in Australia 1032891",
+   "lat": -16.304705096045,
+   "lon": 129.39469372689,
+   "date": "2026-10-16",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25388",
+   "severity": {
+    "magnitude": 7068.0,
+    "unit": "hectare"
+   },
+   "sources": [
+    "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1032891"
+   ]
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25389",
+   "type": "wildfire",
+   "title": "Wildfire in Australia 1032892",
+   "country": "",
+   "location": "Wildfire in Australia 1032892",
+   "lat": -16.4798235838,
+   "lon": 125.16554227198,
+   "date": "2026-10-16",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25389",
+   "severity": {
+    "magnitude": 5023.0,
+    "unit": "hectare"
+   },
+   "sources": [
+    "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1032892"
+   ]
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25340",
+   "type": "storm",
+   "title": "Tropical Cyclone Wati",
+   "country": "",
+   "location": "Tropical Cyclone Wati",
+   "lat": -18.6,
+   "lon": -160.2,
+   "date": "2026-10-18",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25340",
+   "severity": {
+    "magnitude": 55.0,
+    "unit": "kts"
+   },
+   "sources": [
+    "https://www.metoc.navy.mil/jtwc/products/sh0127.tcw"
+   ]
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25094",
+   "type": "storm",
+   "title": "Hurricane Simon",
+   "country": "",
+   "location": "Hurricane Simon",
+   "lat": 21.3,
+   "lon": -110,
+   "date": "2026-10-16",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25094",
+   "severity": {
+    "magnitude": 30.0,
+    "unit": "kts"
+   },
+   "sources": [
+    "https://www.metoc.navy.mil/jtwc/products/ep2026.tcw"
+   ]
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25290",
+   "type": "storm",
+   "title": "Hurricane Trudy",
+   "country": "",
+   "location": "Hurricane Trudy",
+   "lat": 19.3,
+   "lon": -106.9,
+   "date": "2026-10-18",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25290",
+   "severity": {
+    "magnitude": 85.0,
+    "unit": "kts"
+   },
+   "sources": [
+    "https://www.metoc.navy.mil/jtwc/products/ep2126.tcw"
+   ]
+  },
+  {
+   "feed": "EONET",
+   "id": "EONET_25339",
+   "type": "storm",
+   "title": "Super Typhoon Champi",
+   "country": "",
+   "location": "Super Typhoon Champi",
+   "lat": 13.8,
+   "lon": 140.2,
+   "date": "2026-10-18",
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25339",
+   "severity": {
+    "magnitude": 120.0,
+    "unit": "kts"
+   },
+   "sources": [
+    "https://www.metoc.navy.mil/jtwc/products/wp2926.tcw"
+   ]
+  }
+ ],
+ "news": [
+  {
+   "feed": "GDELT",
+   "id": "https://www.broomfieldenterprise.com/2026/10/16/norte-fire-grows-to-50-70-acres-in-san-clemente-threatens-structures/",
+   "type": "news",
+   "title": "Wind - driven wildfire burns homes , prompts evacuations in Southern California",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261018",
+   "url": "https://www.broomfieldenterprise.com/2026/10/16/norte-fire-grows-to-50-70-acres-in-san-clemente-threatens-structures/",
+   "severity": {},
+   "domain": "broomfieldenterprise.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.kvoa.com/news/top-stories/new-wildfire-in-southern-california-explodes-in-size-burning-multiple-homes/article_038fcf8a-dda3-5ed7-b2fa-024282b1b35b.html",
+   "type": "news",
+   "title": "New wildfire in Southern California explodes in size , burning multiple homes",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261018",
+   "url": "https://www.kvoa.com/news/top-stories/new-wildfire-in-southern-california-explodes-in-size-burning-multiple-homes/article_038fcf8a-dda3-5ed7-b2fa-024282b1b35b.html",
+   "severity": {},
+   "domain": "kvoa.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://kfiam640.iheart.com/content/2026-10-17-norte-fire-scorches-homes-brush-in-san-clemente-san-juan-capistrano/",
+   "type": "news",
+   "title": "Norte Fire Scorches Homes , Brush in San Clemente , San Juan Capistrano",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://kfiam640.iheart.com/content/2026-10-17-norte-fire-scorches-homes-brush-in-san-clemente-san-juan-capistrano/",
+   "severity": {},
+   "domain": "kfiam640.iheart.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.pasadenastarnews.com/2026/10/17/norte-fire-in-south-oc-at-5-containment-as-gusty-winds-expected-to-ramp-up/",
+   "type": "news",
+   "title": "Norte fire in south OC at 5 % containment as gusty winds expected to ramp up",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://www.pasadenastarnews.com/2026/10/17/norte-fire-in-south-oc-at-5-containment-as-gusty-winds-expected-to-ramp-up/",
+   "severity": {},
+   "domain": "pasadenastarnews.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://nypost.com/2026/10/17/us-news/cyclists-run-into-wall-of-flames-from-norte-fire-in-orange-county/",
+   "type": "news",
+   "title": "Cyclists run into wall of flames from Norte Fire in Orange County",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://nypost.com/2026/10/17/us-news/cyclists-run-into-wall-of-flames-from-norte-fire-in-orange-county/",
+   "severity": {},
+   "domain": "nypost.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.independent.co.uk/news/world/americas/california-fires-fire-san-clemente-santa-ana-winds-b3068411.html",
+   "type": "news",
+   "title": "Southern California homes engulfed in flames as multiple fast - moving fires rage",
+   "country": "United Kingdom",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://www.independent.co.uk/news/world/americas/california-fires-fire-san-clemente-santa-ana-winds-b3068411.html",
+   "severity": {},
+   "domain": "independent.co.uk"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://mynewsla.com/fire/2026/10/17/norte-fire-scorches-homes-and-brush-in-san-clemente-san-juan-capistrano/",
+   "type": "news",
+   "title": "Norte Fire Rages Across San Clemente , San Juan Capistrano",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://mynewsla.com/fire/2026/10/17/norte-fire-scorches-homes-and-brush-in-san-clemente-san-juan-capistrano/",
+   "severity": {},
+   "domain": "mynewsla.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.fox29.com/news/norte-fire-california-threatens-homes-forces-evacuations",
+   "type": "news",
+   "title": "Norte Fire in California threatens homes , forces evacuations",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://www.fox29.com/news/norte-fire-california-threatens-homes-forces-evacuations",
+   "severity": {},
+   "domain": "fox29.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.liveinsurancenews.com/southern-oregon-homeowners-help/8577028/",
+   "type": "news",
+   "title": "Southern Oregon Homeowners Dropped or Priced Out of Insurance Have Free Help Coming to Their City This Month » Live Insurance News",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://www.liveinsurancenews.com/southern-oregon-homeowners-help/8577028/",
+   "severity": {},
+   "domain": "liveinsurancenews.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://ktxs.com/news/nation-world/fast-moving-norte-fire-burns-homes-as-hot-winds-fuel-spread-in-southern-california",
+   "type": "news",
+   "title": "Fast - moving Norte Fire burns homes as hot winds fuel spread in Southern California",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://ktxs.com/news/nation-world/fast-moving-norte-fire-burns-homes-as-hot-winds-fuel-spread-in-southern-california",
+   "severity": {},
+   "domain": "ktxs.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://www.wbaltv.com/article/norte-fire-california-wildfire/74165253",
+   "type": "news",
+   "title": "Coastal homes burn as hot winds fuel California fires",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://www.wbaltv.com/article/norte-fire-california-wildfire/74165253",
+   "severity": {},
+   "domain": "wbaltv.com"
+  },
+  {
+   "feed": "GDELT",
+   "id": "https://mynewsla.com/business/2026/10/16/brush-fire-scorches-terrain-homes-in-san-clemente-san-juan-capistrano-3/",
+   "type": "news",
+   "title": "Brush Fire Scorches Terrain , Homes in San Clemente , San Juan Capistrano",
+   "country": "United States",
+   "location": "",
+   "lat": null,
+   "lon": null,
+   "date": "20261017",
+   "url": "https://mynewsla.com/business/2026/10/16/brush-fire-scorches-terrain-homes-in-san-clemente-san-juan-capistrano-3/",
+   "severity": {},
+   "domain": "mynewsla.com"
+  }
+ ],
+ "errors": [
+  "GDACS: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+  "GDELT: HTTPError: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28flood%20OR%20%22flash%",
+  "GDELT: HTTPError: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28landslide%20OR%20mudsl",
+  "GDELT: HTTPError: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28tornado%20OR%20hurrica",
+  "GDELT: HTTPError: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=earthquake%20%28video%20O"
+ ],
+ "collected_at": "2026-10-19T02:59:23+00:00"
+}

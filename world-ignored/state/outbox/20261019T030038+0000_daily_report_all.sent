@@ -1,0 +1,10 @@
+{
+ "id": "20261019T030038+0000_daily_report_all",
+ "channel_id": "C0C7UL356KF",
+ "text": "*WORLD IGNORED · DAILY REPORT · Mon Oct 19, 2026* (PHT)\n\n*A. Yesterday's performance*\nNo platform analytics connected yet, so no metrics to report. (Nothing is estimated.)\n\n*B. Today's posting queue*\n• 08:00 (post1): empty, no cleared video assigned\n• 13:00 (post2): empty, no cleared video assigned\n• 19:00 (post3): empty, no cleared video assigned\n\n*C. Today's content recommendations*\nNo candidate met the bar (verified event, strong on-camera impact, rights obtainable). Slots stay empty rather than filled with weak footage.\n_Rejected (3):_\n   • Car swept off road as landslides and flash floods hit Kundasang (Malaysia): too old (more than 7 days since filming/event)\n   • Super Typhoon Champi passes south of Guam (Guam): no real disaster impact on camera\n   • Hurricane Trudy lashes Mexico's Pacific coast (Mexico): no real disaster impact on camera\n\n*D. Automation status*\nPublishing: 🟡 dry-run (not live)\nConnected platforms (0/9): none\nMissing API access: TikTok, YouTube, IG Reels, FB Reels, Threads, FB feed, X, LinkedIn (these go out as manual-upload packages; `python -m wi health` lists the exact credentials)\nManual by design: IG feed (no API for this format)\nDrive storage: ❌ no Google credentials (set GOOGLE_SERVICE_ACCOUNT_JSON or GOOGLE_OAUTH_* secrets)\nSlack transport: connector (posts as automation user)",
+ "thread_ts": null,
+ "kind": "daily_report",
+ "item_id": null,
+ "files": [],
+ "dedupe_key": "daily_report:2026-10-19"
+}

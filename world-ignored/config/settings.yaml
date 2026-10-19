@@ -1,0 +1,93 @@
+# World Ignored automation settings.
+# Secrets never go in this file. They are read from environment variables (see docs/SETUP.md).
+
+timezone: Asia/Manila
+
+slack:
+  workspace: Grandeur Materials
+  channel_name: world-ignored
+  channel_id: C0C7UL356KF
+  # Only these Slack user IDs can approve, request changes, hold or reject.
+  approvers:
+    U0A4HF5FN6S: Nathan
+    U0A4HF78STG: Admin
+  # The Slack connector used by scheduled runs is signed in as this user, so anything the
+  # automation posts appears under this name. Messages from this ID never count as approvals,
+  # so the automation can't approve its own work. Install a dedicated bot token
+  # (SLACK_BOT_TOKEN) to post as a bot, then Faith can be added to approvers.
+  automation_identity: U0A5DQ5TDT2
+
+schedule:
+  daily_report: "07:00"
+  research: "06:30"
+  slots:
+    - {id: post1, time: "08:00", brief: "Strongest verified story; significant human impact or destruction"}
+    - {id: post2, time: "13:00", brief: "Different country or disaster category from post1"}
+    - {id: post3, time: "19:00", brief: "Strongest remaining newsworthy video; recent developments"}
+  # Approvals must be in at least this long before a slot or the slot is skipped (never auto-approved).
+  approval_cutoff_minutes: 15
+
+research:
+  recency_hours: 72
+  max_candidates: 12
+  # An event already covered within this many days is a repeat unless it is flagged as a significant new development.
+  repeat_window_days: 7
+  weights:            # ranking criteria, in priority order
+    human_impact: 0.24
+    disaster_activity_on_camera: 0.20
+    newsworthiness: 0.14
+    recency: 0.12
+    verification_confidence: 0.12
+    video_quality: 0.08
+    originality: 0.06
+    rights_availability: 0.04
+  min_score_to_recommend: 0.55
+
+# Output presets. Each platform maps to one preset. See docs/PLATFORM_SPECS.md for sources.
+presets:
+  v9x16: {width: 1080, height: 1920, label: "9:16 vertical"}
+  f4x5:  {width: 1080, height: 1350, label: "4:5 feed"}
+  # X documents 1280x1024 max and recommends 720x1280 portrait, so X gets a downscale of the 9:16 master.
+  x720:  {width: 720, height: 1280, label: "9:16 720p for X", derive_from: v9x16}
+
+platforms:
+  tiktok:          {preset: v9x16, enabled: true}
+  youtube_shorts:  {preset: v9x16, enabled: true}
+  instagram_reels: {preset: v9x16, enabled: true}   # API posts all IG video as Reels (share_to_feed=true)
+  facebook_reels:  {preset: v9x16, enabled: true}
+  threads:         {preset: v9x16, enabled: true}
+  instagram_feed:  {preset: f4x5,  enabled: true, manual_only: true}   # Meta Business Suite joint FB+IG feed post; no API equivalent
+  facebook_feed:   {preset: f4x5,  enabled: true}
+  x:               {preset: x720,  enabled: true}
+  linkedin:        {preset: f4x5,  enabled: true}
+
+editing:
+  font: assets/fonts/Montserrat-VF.ttf
+  headline_weight: ExtraBold
+  sub_weight: Bold
+  banner_rgba: [12, 12, 12, 190]     # dark, semi-transparent
+  opening_seconds: 4.5
+  closing_seconds: 4.0
+  fade_seconds: 0.3
+  max_duration_seconds: 90
+  # Platform UI safe zones as fractions of frame height/width. Banners must stay inside and are
+  # centred. Below `lower_from` (share of height) the side margin widens to `side_lower` to clear the
+  # TikTok/Reels/Shorts action buttons, so a narrower banner variant is used there.
+  safe_zones:
+    v9x16: {top: 0.11, bottom: 0.22, side: 0.07, side_lower: 0.14, lower_from: 0.45}
+    f4x5:  {top: 0.05, bottom: 0.08, side: 0.05, side_lower: 0.05, lower_from: 1.0}
+  # QC thresholds
+  min_crop_coverage_mean: 0.62       # share of on-screen action kept inside the crop
+  min_crop_coverage_floor: 0.40      # worst sustained second
+  max_banner_overlap: 0.18           # share of action covered by a banner
+  # Blurred-background fit is never automatic. It is only rendered when a reviewer asks for it.
+  allow_blur_fallback: false
+  video_crf: 18
+
+google:
+  drive_root_folder: 12ykA8x4JIdFVsN-ytneDQtQHE8xrHZQL      # "*World Ignored/Automated Posting"; subfolder ids in state/drive.json
+  tracker_sheet_id: 1K8YbsIpXGRQA9Raib4P3JloMZhUJfXvDFVGh6iFCCSE   # "World Ignored — Content Tracker"
+
+control:
+  # Pause/stop also live in state/control.json so Slack commands can flip them without a code change.
+  publishing_live: false   # stays false until accounts, rights and approvals are in place

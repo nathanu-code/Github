@@ -1,0 +1,1914 @@
+{
+ "items": {
+  "WI-20261019-spain-river-bursts-sweeping-ca": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T09:43:32+00:00",
+   "discovered_by": "research + team upload (manual posting)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "River bursts, sweeping cars through the streets",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Spain",
+    "event_date": "2026-10-19",
+    "location": "Els Poblets",
+    "new_development": false,
+    "sources": [
+     {
+      "name": "La Marina",
+      "url": "https://lamarina.eldiario.es/2026/10/19/una-historica-tromba-de-500-mm-desborda-el-rio-girona-y-convierte-las-calles-en-rios-con-coches-flotando-en-verger-y-els-poblets-y-aisla-pego/"
+     },
+     {
+      "name": "The Local",
+      "url": "https://www.thelocal.es/20261019/latest-at-least-two-dead-as-floods-wreak-havoc-in-eastern-spain"
+     }
+    ],
+    "title": "River bursts, sweeping cars through the streets",
+    "type": "flash flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "La Marina Plaza (compiled resident videos)",
+    "platform": "",
+    "published_date": "2026-10-19",
+    "raw_drive_id": "1qCLtEZyKGXqO45e0eCTWxe3vAKcQqYuG",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "https://lamarina.eldiario.es/2026/10/19/las-impresionantes-imagenes-de-coches-amontonados-y-flotando-en-els-poblets/"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T09:43:32+00:00",
+     "by": "claude",
+     "from": "UNVERIFIED",
+     "note": "verified 2026-10-19",
+     "to": "EVENT_VERIFIED/FOOTAGE_UNVERIFIED"
+    },
+    {
+     "at": "2026-10-19T09:43:32+00:00",
+     "by": "claude",
+     "from": "EVENT_VERIFIED/FOOTAGE_UNVERIFIED",
+     "note": "verified 2026-10-19",
+     "to": "FOOTAGE_VERIFIED/RIGHTS_PENDING"
+    }
+   ],
+   "id": "WI-20261019-spain-river-bursts-sweeping-ca",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "La Marina Plaza / residents of Els Poblets",
+    "evidence_ref": "",
+    "holder": "La Marina Plaza",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "pending - permission not yet requested"
+   },
+   "schedule": {
+    "date": "2026-10-19",
+    "slot": "post3",
+    "time": "19:00"
+   },
+   "score": null,
+   "status": "FOOTAGE_VERIFIED/RIGHTS_PENDING",
+   "verification": {
+    "checks": [
+     "event confirmed by La Marina, The Local, Asharq Al-Awsat",
+     "road sign to Dénia matches Marina Alta location",
+     "published by La Marina on 2026-10-19"
+    ],
+    "concerns": [],
+    "confidence": 0.85,
+    "event_verified": true,
+    "footage_verified": true
+   }
+  },
+  "WI-LEGACY-australia-powerful-storm-batters-a": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Australia",
+    "event_date": "2026-10-12",
+    "location": "Alice Springs",
+    "new_development": false,
+    "sources": [],
+    "title": "Powerful storm batters Alice Springs",
+    "type": "storm"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:powerful-storm-batters-alice-springs"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-australia-powerful-storm-batters-a",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-australia-tornado-in-australia": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Australia",
+    "event_date": "2026-10-05",
+    "location": "Australia",
+    "new_development": false,
+    "sources": [],
+    "title": "Tornado in Australia",
+    "type": "tornado"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:tornado-in-australia"
+   },
+   "history": [],
+   "id": "WI-LEGACY-australia-tornado-in-australia",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-colombia-colombia-clips": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Colombia",
+    "event_date": "",
+    "location": "Colombia",
+    "new_development": false,
+    "sources": [],
+    "title": "Colombia clips",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:colombia-clips"
+   },
+   "history": [],
+   "id": "WI-LEGACY-colombia-colombia-clips",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-india-landslide-hits-shimla-ro": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "India",
+    "event_date": "2026-10-07",
+    "location": "Shimla",
+    "new_development": false,
+    "sources": [],
+    "title": "Landslide hits Shimla road",
+    "type": "landslide"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:landslide-hits-shimla-road"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-india-landslide-hits-shimla-ro",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-india-massive-landslide-endang": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "India",
+    "event_date": "",
+    "location": "India",
+    "new_development": false,
+    "sources": [],
+    "title": "Massive landslide endangers motorists in India",
+    "type": "landslide"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:massive-landslide-endangers-motorists-in"
+   },
+   "history": [],
+   "id": "WI-LEGACY-india-massive-landslide-endang",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-indonesia-wildfire-haze-in-palangk": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Indonesia",
+    "event_date": "2026-10-02",
+    "location": "Palangka Raya",
+    "new_development": false,
+    "sources": [],
+    "title": "Wildfire haze in Palangka Raya",
+    "type": "wildfire"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:wildfire-haze-in-palangka-raya"
+   },
+   "history": [],
+   "id": "WI-LEGACY-indonesia-wildfire-haze-in-palangk",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-mexico-hurricane-polo-hits-la-p": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Mexico",
+    "event_date": "2026-10-01",
+    "location": "La Purísima",
+    "new_development": false,
+    "sources": [],
+    "title": "Hurricane Polo hits La Purisima",
+    "type": "hurricane"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:hurricane-polo-hits-la-purisima"
+   },
+   "history": [],
+   "id": "WI-LEGACY-mexico-hurricane-polo-hits-la-p",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-mexico-workers-save-a-driver-fr": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Mexico",
+    "event_date": "2026-10-16",
+    "location": "Monterrey",
+    "new_development": false,
+    "sources": [],
+    "title": "Workers save a driver from raging floodwaters",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:workers-save-a-driver-from-raging-floodw"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-mexico-workers-save-a-driver-fr",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-nepal-flash-flood-in-nepal": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Nepal",
+    "event_date": "2026-10-12",
+    "location": "Nepal",
+    "new_development": false,
+    "sources": [],
+    "title": "Flash flood in Nepal",
+    "type": "flash flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:flash-flood-in-nepal"
+   },
+   "history": [],
+   "id": "WI-LEGACY-nepal-flash-flood-in-nepal",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-nepal-flooding-in-chame-manang": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Nepal",
+    "event_date": "",
+    "location": "Chame, Manang",
+    "new_development": false,
+    "sources": [],
+    "title": "Flooding in Chame, Manang District",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:flooding-in-chame-manang-district"
+   },
+   "history": [],
+   "id": "WI-LEGACY-nepal-flooding-in-chame-manang",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-nepal-flooding-in-mustang-dist": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Nepal",
+    "event_date": "",
+    "location": "Mustang",
+    "new_development": false,
+    "sources": [],
+    "title": "Flooding in Mustang District",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:flooding-in-mustang-district"
+   },
+   "history": [],
+   "id": "WI-LEGACY-nepal-flooding-in-mustang-dist",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-new-zealand-wildfire-burns-above-lak": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "New Zealand",
+    "event_date": "2026-10-06",
+    "location": "Walter Peak",
+    "new_development": false,
+    "sources": [],
+    "title": "Wildfire burns above Lake Whakatipu",
+    "type": "wildfire"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:wildfire-burns-above-lake-whakatipu"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-new-zealand-wildfire-burns-above-lak",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-panama-earthquake-in-panama": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Panama",
+    "event_date": "2026-10-10",
+    "location": "Panama",
+    "new_development": false,
+    "sources": [],
+    "title": "Earthquake in Panama",
+    "type": "earthquake"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:earthquake-in-panama"
+   },
+   "history": [],
+   "id": "WI-LEGACY-panama-earthquake-in-panama",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-paraguay-hailstorm-in-paraguay": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Paraguay",
+    "event_date": "2026-10-06",
+    "location": "Paraguay",
+    "new_development": false,
+    "sources": [],
+    "title": "Hailstorm in Paraguay",
+    "type": "hail"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:hailstorm-in-paraguay"
+   },
+   "history": [],
+   "id": "WI-LEGACY-paraguay-hailstorm-in-paraguay",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-philippines-philippines-clips": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Philippines",
+    "event_date": "",
+    "location": "Philippines",
+    "new_development": false,
+    "sources": [],
+    "title": "Philippines clips",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:philippines-clips"
+   },
+   "history": [],
+   "id": "WI-LEGACY-philippines-philippines-clips",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-t-rkiye-flash-flood-in-istanbul": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Türkiye",
+    "event_date": "2026-10-15",
+    "location": "Istanbul",
+    "new_development": false,
+    "sources": [],
+    "title": "Flash flood in Istanbul",
+    "type": "flash flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:flash-flood-in-istanbul"
+   },
+   "history": [],
+   "id": "WI-LEGACY-t-rkiye-flash-flood-in-istanbul",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-t-rkiye-istanbul-flooding": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Türkiye",
+    "event_date": "2026-10-16",
+    "location": "Istanbul",
+    "new_development": false,
+    "sources": [],
+    "title": "Istanbul flooding",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:istanbul-flooding"
+   },
+   "history": [],
+   "id": "WI-LEGACY-t-rkiye-istanbul-flooding",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-thailand-bangkok-clip": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Thailand",
+    "event_date": "",
+    "location": "Bangkok",
+    "new_development": false,
+    "sources": [],
+    "title": "Bangkok clip",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:bangkok-clip"
+   },
+   "history": [],
+   "id": "WI-LEGACY-thailand-bangkok-clip",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-united-state-california-coastal-homes": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "United States",
+    "event_date": "",
+    "location": "Long Beach, California",
+    "new_development": false,
+    "sources": [],
+    "title": "California coastal homes battered by waves",
+    "type": "storm"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:california-coastal-homes-battered-by-wav"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation; exact event date not shown",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-united-state-california-coastal-homes",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-united-state-magma-intrusion-in-hawai": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "United States",
+    "event_date": "2026-10-03",
+    "location": "Hawaii",
+    "new_development": false,
+    "sources": [],
+    "title": "Magma intrusion in Hawaii",
+    "type": "volcano"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:magma-intrusion-in-hawaii"
+   },
+   "history": [],
+   "id": "WI-LEGACY-united-state-magma-intrusion-in-hawai",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-united-state-massive-waves-in-califor": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "United States",
+    "event_date": "2026-10-13",
+    "location": "California",
+    "new_development": false,
+    "sources": [],
+    "title": "Massive waves in California",
+    "type": "storm"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:massive-waves-in-california"
+   },
+   "history": [],
+   "id": "WI-LEGACY-united-state-massive-waves-in-califor",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-west-africa-flooding-in-west-africa": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T08:32:49+00:00",
+   "discovered_by": "legacy import (raw folder clips, already posted per team)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "West Africa",
+    "event_date": "2026-10-07",
+    "location": "West Africa",
+    "new_development": false,
+    "sources": [],
+    "title": "Flooding in West Africa",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:flooding-in-west-africa"
+   },
+   "history": [],
+   "id": "WI-LEGACY-west-africa-flooding-in-west-africa",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  }
+ },
+ "updated_at": "2026-10-19T09:43:32+00:00",
+ "version": 1
+}

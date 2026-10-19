@@ -1,0 +1,60 @@
+{
+ "date": "2026-10-19",
+ "collected_at": "2026-10-19T03:00:38+00:00",
+ "platforms": {
+  "tiktok": {
+   "connected": false,
+   "detail": "missing credentials: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_REFRESH_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "youtube_shorts": {
+   "connected": false,
+   "detail": "missing credentials: YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "instagram_reels": {
+   "connected": false,
+   "detail": "missing credentials: IG_USER_ID, META_PAGE_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "facebook_reels": {
+   "connected": false,
+   "detail": "missing credentials: META_PAGE_ID, META_PAGE_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "threads": {
+   "connected": false,
+   "detail": "missing credentials: THREADS_USER_ID, THREADS_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "instagram_feed": {
+   "connected": false,
+   "detail": "Instagram's API publishes all video as Reels; post the 4:5 version manually in Meta Business Suite",
+   "account": {},
+   "posts": {}
+  },
+  "facebook_feed": {
+   "connected": false,
+   "detail": "missing credentials: META_PAGE_ID, META_PAGE_TOKEN",
+   "account": {},
+   "posts": {}
+  },
+  "x": {
+   "connected": false,
+   "detail": "missing credentials: X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET",
+   "account": {},
+   "posts": {}
+  },
+  "linkedin": {
+   "connected": false,
+   "detail": "missing credentials: LINKEDIN_ACCESS_TOKEN, LINKEDIN_ORG_ID",
+   "account": {},
+   "posts": {}
+  }
+ }
+}
