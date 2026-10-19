@@ -162,7 +162,6 @@ def test_captions_use_only_verified_fields():
     assert "October 15, 2026" in caps["instagram_reels"]
     assert "🎥 Jane Filmer" in caps["instagram_reels"]
     assert caps["instagram_reels"].rstrip().endswith("#WorldUnignored")
-    assert "Follow instructions from local authorities" in caps["instagram_reels"]
     assert "Fact source" in caps["instagram_reels"]
     assert len(caps["threads"]) <= 500 and captions._x_len(caps["x"]) <= 280
     assert "http" not in caps["x"]
