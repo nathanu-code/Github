@@ -20,10 +20,11 @@ import requests
 
 from . import config
 
-FOLDERS = ["Raw Videos", "Sources and Permissions", "Verified Footage", "Edited Videos — 9x16",
-           "Edited Videos — 4x5", "Video Previews", "Captions", "Approved for Publishing", "Published Videos",
+FOLDERS = ["Raw Videos", "Sources and Permissions", "Verified Footage", "Edited Videos", "Video Previews", "Captions", "Approved for Publishing", "Published Videos",
            "Daily Performance Reports"]
-PRESET_FOLDER = {"v9x16": "Edited Videos — 9x16", "f4x5": "Edited Videos — 4x5", "x720": "Edited Videos — 9x16"}
+# Every version of a video (9:16, 4:5, X) goes in one per-video subfolder of "Edited Videos";
+# the raw file goes in a matching subfolder of "Raw Videos".
+PRESET_FOLDER = {"v9x16": "Edited Videos", "f4x5": "Edited Videos", "x720": "Edited Videos"}
 API = "https://www.googleapis.com/drive/v3"
 UPLOAD = "https://www.googleapis.com/upload/drive/v3/files"
 
@@ -85,7 +86,8 @@ class Drive:
         return m
 
     def _find_folder(self, name: str, parent: str | None) -> str | None:
-        q = f"name = '{name}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+        safe = name.replace("\\", "\\\\").replace("'", "\\'")
+        q = f"name = '{safe}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
         if parent:
             q += f" and '{parent}' in parents"
         r = requests.get(f"{API}/files", headers=self._auth(), timeout=30,
@@ -104,8 +106,17 @@ class Drive:
         return r.json()["id"]
 
     # --- files -----------------------------------------------------------------------------
-    def find(self, name: str, folder: str) -> dict | None:
-        fid = self.folders()[folder]
+    def subfolder(self, folder: str, name: str) -> str:
+        """Id of the per-video folder `name` inside the mapped `folder`, created if missing."""
+        parent = self.folders()[folder]
+        return self._find_folder(name, parent) or self._mkdir(name, parent)
+
+    def _folder_id(self, folder: str, sub: str | None) -> str:
+        return self.subfolder(folder, sub) if sub else self.folders()[folder]
+
+    def find(self, name: str, folder: str, sub: str | None = None) -> dict | None:
+        fid = self._folder_id(folder, sub)
+        name = name.replace("\\", "\\\\").replace("'", "\\'")
         r = requests.get(f"{API}/files", headers=self._auth(), timeout=30, params={
             "q": f"name = '{name}' and '{fid}' in parents and trashed = false",
             "fields": "files(id,name,webViewLink,md5Checksum,size)", "supportsAllDrives": True,
@@ -114,13 +125,14 @@ class Drive:
         f = r.json().get("files", [])
         return f[0] if f else None
 
-    def upload(self, path: str | Path, folder: str, name: str | None = None) -> dict:
-        """Resumable upload; idempotent by name within the folder (an existing file is updated, not duplicated)."""
+    def upload(self, path: str | Path, folder: str, name: str | None = None, sub: str | None = None) -> dict:
+        """Resumable upload; idempotent by name within the folder (an existing file is updated, not duplicated).
+        `sub` puts the file in a per-video subfolder of `folder`."""
         path = Path(path)
         name = name or path.name
         mime = mimetypes.guess_type(name)[0] or "application/octet-stream"
-        existing = self.find(name, folder)
-        meta = {"name": name} if existing else {"name": name, "parents": [self.folders()[folder]]}
+        existing = self.find(name, folder, sub)
+        meta = {"name": name} if existing else {"name": name, "parents": [self._folder_id(folder, sub)]}
         url = f"{UPLOAD}/{existing['id']}" if existing else UPLOAD
         method = requests.patch if existing else requests.post
         init = method(url, headers={**self._auth(), "X-Upload-Content-Type": mime}, json=meta, timeout=60,
