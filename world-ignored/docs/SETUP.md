@@ -17,21 +17,22 @@ the report but couldn't post it or save state. Fix both in claude.ai, under Code
 2. Or set `SLACK_BOT_TOKEN` (step 3), and Python posts and reads Slack itself.
 Then use "Run now" on the report routine and check that the report lands in #world-ignored.
 
-## 1. Google Drive + Sheets (top priority)
-Scheduled runs use temporary containers, so without this, edited videos vanish after each run.
-
-Option A, service account (recommended):
-1. In Google Cloud Console, create a project and enable the **Google Drive API** and **Google Sheets API**.
-2. Create a service account, add a JSON key, and download it.
-3. In Drive, share the **World Ignored** folder and the **World Ignored — Content Tracker** sheet with
-   the service account's email as **Editor**.
-4. Secret `GOOGLE_SERVICE_ACCOUNT_JSON` = the whole JSON file contents.
-
-Option B, OAuth for admin@grandeurdesignsupply.com: create an OAuth client (Desktop), authorise the
-scopes `drive` and `spreadsheets`, then set `GOOGLE_OAUTH_CLIENT_ID`, `GOOGLE_OAUTH_CLIENT_SECRET`,
-`GOOGLE_OAUTH_REFRESH_TOKEN`.
-
-Folder IDs are already in `state/drive.json`, and the sheet ID is in `config/settings.yaml`.
+## 1. Google Drive + Sheets ✅ connected (Oct 19, 2026)
+Set up with Google OAuth as **admin@grandeurdesignsupply.com** (admin@ has Editor access to Faith's
+"*World Ignored" folder, so files stay in place and no service-account key is needed).
+- Google Cloud project **World Ignored Automation**; Drive API + Sheets API enabled; consent screen
+  **Internal**; scopes `drive` + `spreadsheets`; OAuth client "World Ignored Playground" (Web application,
+  redirect URI `https://developers.google.com/oauthplayground`).
+- Refresh token obtained in Google OAuth Playground and saved, with the client ID and secret, as
+  environment variables `GOOGLE_OAUTH_CLIENT_ID`, `GOOGLE_OAUTH_CLIENT_SECRET`,
+  `GOOGLE_OAUTH_REFRESH_TOKEN` in the cloud environment "Greg YouTube Cloud fare" (edit it from
+  claude.ai/code → environment picker under the prompt box → gear → Edit).
+- Root folder: `*World Ignored` (`18qBzGnXMVRlgTQlq1YRVk2aHpxtqKwGX`); the 10 automation subfolders
+  and the Content Tracker sheet live inside it (ids in `state/drive.json`).
+- Check any time: `python -m wi drive-check <folder id> --upload-test`.
+- Revoke: myaccount.google.com/permissions (as admin@) → World Ignored Automation → Remove access.
+  To rotate the client secret: Cloud Console → Google Auth Platform → Clients → add a new secret,
+  update the environment variable, then disable and delete the old one.
 
 ## 2. Footage rights process (team decision, no code needed)
 Pick at least one route: direct permission (template: `ops/rights_request_template.md`) and/or a
