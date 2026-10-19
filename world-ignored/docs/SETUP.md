@@ -8,6 +8,15 @@ add each value as an environment variable or network secret with the exact name 
 Priority order: steps 1–3 unblock the whole pipeline. Steps 4–9 each switch one platform from
 manual to automatic.
 
+## 0. Give the scheduled routines repo + Slack access (top priority)
+A test run of the 7 AM routine on Oct 19 showed that routines created from a session have **no
+connectors** (this org can't attach them that way) and **can't push** to the repo, so they could build
+the report but couldn't post it or save state. Fix both in claude.ai, under Code, then Routines:
+1. Open each "World Ignored" routine, then **Edit**, then add the repository **nathanu-code/Github** as a
+   source (with push access), and attach the **Slack** connector (and Google Drive).
+2. Or set `SLACK_BOT_TOKEN` (step 3), and Python posts and reads Slack itself.
+Then use "Run now" on the report routine and check that the report lands in #world-ignored.
+
 ## 1. Google Drive + Sheets (top priority)
 Scheduled runs use temporary containers, so without this, edited videos vanish after each run.
 

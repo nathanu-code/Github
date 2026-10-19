@@ -44,7 +44,7 @@
 | Slack review + approvals | ✅ built and tested (approver allow-list, version codes, no self-approval); posts via connector |
 | Publishing (7 platforms) | ✅ adapters + idempotent runner tested with a fake platform; ❌ live tests blocked by credentials |
 | Daily report | ✅ built; scheduled; analytics blocked by credentials |
-| Scheduling (no laptop needed) | ✅ Claude Code routines |
+| Scheduling (no laptop needed) | ✅ Claude Code routines created (research 05:47, report 06:52; 3 publish slots created disabled). ⚠️ Test fire: clone, setup, analytics and report all worked, but routines lack Slack and repo-push access until they're given a source and connector in the routines UI (docs/SETUP.md §0) |
 | Pause / emergency stop | ✅ `WI PAUSE` / `WI STOP` in Slack, or `wi control` |
 
 ## Security notes

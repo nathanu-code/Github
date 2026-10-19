@@ -124,7 +124,10 @@ def recommendations(today_iso: str) -> list[str]:
                      f"   footage: <{c['footage_url']}|link> · filmer: {c.get('original_creator') or 'unconfirmed'} · "
                      f"rights: {c.get('rights_outlook', 'unknown')}\n   {c.get('verification_summary', '')[:220]}")
     if r.get("rejected"):
-        lines.append(f"_{len(r['rejected'])} other candidates rejected (repeats, unverified, weak or no rights path)._")
+        lines.append(f"_Rejected ({len(r['rejected'])}):_")
+        for c in r["rejected"][:5]:
+            why = "; ".join(c.get("blockers") or [f"score {c['score']:.2f} below bar"])
+            lines.append(f"   • {c['title'][:70]} ({c['country']}): {why}")
     return lines
 
 

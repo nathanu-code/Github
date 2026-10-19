@@ -184,3 +184,27 @@ def test_captions_refuse_missing_credit():
 def test_location_line():
     it = _cleared_item()
     assert captions.location_line(it) == "SAKARYA, TÜRKIYE  |  OCT 15, 2026"
+
+
+def test_slack_outbox_dedupes_queued_messages(tmp_path, monkeypatch):
+    from wi import config, slack
+    monkeypatch.setattr(config, "STATE_DIR", tmp_path)
+    monkeypatch.setattr(slack, "OUTBOX", tmp_path / "outbox")
+    monkeypatch.delenv("SLACK_BOT_TOKEN", raising=False)
+    a = slack.send("report", kind="daily_report", dedupe_key="daily_report:2026-10-19")
+    b = slack.send("report", kind="daily_report", dedupe_key="daily_report:2026-10-19")
+    assert a["status"] == "queued" and b["status"] == "already_queued"
+    assert len(list((tmp_path / "outbox").glob("*.json"))) == 1
+    assert "[redacted]" in slack.scrub("token xoxb-123-abc")
+
+
+def test_old_or_impactless_footage_is_blocked():
+    from wi.research import scoring
+    base = {"title": "t", "type": "flood", "country": "X", "location": "Y", "footage_url": "u",
+            "scores": {"human_impact": 0.9, "disaster_activity_on_camera": 0.9, "newsworthiness": 0.8,
+                       "verification_confidence": 0.9, "video_quality": 0.8}, "rights_outlook": "contactable"}
+    old = scoring.score({**base, "event_date": "2026-01-01", "filmed_date": "unconfirmed"}, [])
+    assert any("too old" in b for b in old["blockers"])
+    weak = scoring.score({**base, "event_date": "2026-10-18",
+                          "scores": {**base["scores"], "disaster_activity_on_camera": 0.1}}, [])
+    assert any("impact" in b for b in weak["blockers"])

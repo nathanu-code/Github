@@ -1,0 +1,155 @@
+{
+ "date": "2026-10-19",
+ "picks": [],
+ "rejected": [
+  {
+   "title": "Car swept off road as landslides and flash floods hit Kundasang",
+   "type": "landslide",
+   "country": "Malaysia",
+   "location": "Kundasang, Sabah",
+   "event_date": "2026-10-11",
+   "filmed_date": "unconfirmed",
+   "published_date": "2026-10-11",
+   "footage_url": "https://www.nst.com.my/amp/news/regional/2026/10/1553315/heavy-rain-triggers-landslides-flash-floods-kundasang-watch",
+   "original_creator": "unconfirmed (NST video report; original filmer not identified)",
+   "platform": "news site",
+   "description": "Heavy rain triggered landslides and flash floods around Kundasang; a car was swept off the road and overturned.",
+   "summary": "Heavy rain triggered landslides and flash floods around Kundasang in Sabah, sweeping a car off the road.",
+   "sources": [
+    {
+     "name": "New Straits Times",
+     "url": "https://www.nst.com.my/amp/news/regional/2026/10/1553315/heavy-rain-triggers-landslides-flash-floods-kundasang-watch"
+    }
+   ],
+   "scores": {
+    "human_impact": 0.6,
+    "disaster_activity_on_camera": 0.85,
+    "newsworthiness": 0.5,
+    "verification_confidence": 0.7,
+    "video_quality": 0.5
+   },
+   "rights_outlook": "contactable",
+   "verification_summary": "Event reported by NST (police: no casualties). Original filmer not identified; 8 days old.",
+   "concerns": [
+    "8 days old",
+    "original filmer unknown"
+   ],
+   "sub_scores": {
+    "human_impact": 0.6,
+    "disaster_activity_on_camera": 0.85,
+    "newsworthiness": 0.5,
+    "recency": 0.0,
+    "verification_confidence": 0.7,
+    "video_quality": 0.5,
+    "originality": 1.0,
+    "rights_availability": 0.45
+   },
+   "score": 0.586,
+   "repeat": {
+    "same_url": false,
+    "same_event": [],
+    "same_country_recent": 0,
+    "same_type_recent": 0
+   },
+   "blockers": [
+    "too old (more than 7 days since filming/event)"
+   ]
+  },
+  {
+   "title": "Super Typhoon Champi passes south of Guam",
+   "type": "typhoon",
+   "country": "Guam",
+   "location": "Guam",
+   "event_date": "2026-10-17",
+   "footage_url": "https://www.youtube.com/shorts/FGtMdl8DplE",
+   "original_creator": "unconfirmed",
+   "summary": "Champi's centre passed about 12 miles south of Guam; the island escaped catastrophic wind damage.",
+   "sources": [
+    {
+     "name": "Yale Climate Connections",
+     "url": "https://yaleclimateconnections.org/2026/10/super-typhoon-champi-intensifies-to-a-cat-5-after-battering-guam/"
+    }
+   ],
+   "scores": {
+    "human_impact": 0.3,
+    "disaster_activity_on_camera": 0.2,
+    "newsworthiness": 0.6,
+    "verification_confidence": 0.8,
+    "video_quality": 0.5
+   },
+   "rights_outlook": "unknown",
+   "verification_summary": "Storm verified (EONET, Yale Climate Connections); only pre-impact forecast video found, no damage footage.",
+   "concerns": [
+    "no impact footage found"
+   ],
+   "sub_scores": {
+    "human_impact": 0.3,
+    "disaster_activity_on_camera": 0.2,
+    "newsworthiness": 0.6,
+    "recency": 0.8,
+    "verification_confidence": 0.8,
+    "video_quality": 0.5,
+    "originality": 1.0,
+    "rights_availability": 0.2
+   },
+   "score": 0.496,
+   "repeat": {
+    "same_url": false,
+    "same_event": [],
+    "same_country_recent": 0,
+    "same_type_recent": 0
+   },
+   "blockers": [
+    "no real disaster impact on camera"
+   ]
+  },
+  {
+   "title": "Hurricane Trudy lashes Mexico's Pacific coast",
+   "type": "hurricane",
+   "country": "Mexico",
+   "location": "Pacific coast",
+   "event_date": "2026-10-18",
+   "footage_url": "https://www.ctvnews.ca/climate-and-environment/article/hurricane-trudy-lashes-mexicos-pacific-coast-with-heavy-rain-and-strong-winds/",
+   "original_creator": "unconfirmed",
+   "summary": "Hurricane Trudy brought heavy rain and strong winds to parts of Mexico's Pacific coast.",
+   "sources": [
+    {
+     "name": "AP via CTV News",
+     "url": "https://www.ctvnews.ca/climate-and-environment/article/hurricane-trudy-lashes-mexicos-pacific-coast-with-heavy-rain-and-strong-winds/"
+    }
+   ],
+   "scores": {
+    "human_impact": 0.3,
+    "disaster_activity_on_camera": 0.1,
+    "newsworthiness": 0.6,
+    "verification_confidence": 0.8,
+    "video_quality": 0.0
+   },
+   "rights_outlook": "unknown",
+   "verification_summary": "Storm verified (EONET, AP); no damage footage found yet. Re-check tomorrow.",
+   "concerns": [
+    "no footage found"
+   ],
+   "sub_scores": {
+    "human_impact": 0.3,
+    "disaster_activity_on_camera": 0.1,
+    "newsworthiness": 0.6,
+    "recency": 1.0,
+    "verification_confidence": 0.8,
+    "video_quality": 0.0,
+    "originality": 0.85,
+    "rights_availability": 0.2
+   },
+   "score": 0.451,
+   "repeat": {
+    "same_url": false,
+    "same_event": [],
+    "same_country_recent": 1,
+    "same_type_recent": 0
+   },
+   "blockers": [
+    "no real disaster impact on camera"
+   ]
+  }
+ ]
+}

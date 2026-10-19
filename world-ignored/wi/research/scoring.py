@@ -10,6 +10,7 @@ footage never fills a slot.
 """
 from __future__ import annotations
 
+import re
 from datetime import date, datetime, timezone
 
 from .. import config
@@ -65,7 +66,8 @@ def repeat_info(cand: dict, history: list[dict]) -> dict:
 def score(cand: dict, history: list[dict]) -> dict:
     w = config.settings()["research"]["weights"]
     sub = {k: float(cand.get("scores", {}).get(k, 0.0)) for k in CRITERIA}
-    sub["recency"] = recency_score(cand.get("filmed_date") or cand.get("event_date"))
+    filmed = cand.get("filmed_date") or ""
+    sub["recency"] = recency_score(filmed if re.fullmatch(r"\d{4}-\d{2}-\d{2}", filmed) else cand.get("event_date"))
     rep = repeat_info(cand, history)
     orig = 1.0 - min(0.6, 0.15 * rep["same_country_recent"] + 0.1 * rep["same_type_recent"])
     if rep["same_event"] and not cand.get("significant_new_development"):
@@ -78,6 +80,10 @@ def score(cand: dict, history: list[dict]) -> dict:
         blockers.append("already in tracker (same footage URL)")
     if rep["same_event"] and not cand.get("significant_new_development"):
         blockers.append(f"repeat of {', '.join(rep['same_event'])}")
+    if sub["recency"] == 0.0 and not cand.get("significant_new_development"):
+        blockers.append("too old (more than 7 days since filming/event)")
+    if sub["disaster_activity_on_camera"] < 0.3:
+        blockers.append("no real disaster impact on camera")
     if sub["verification_confidence"] < 0.5:
         blockers.append("verification confidence too low")
     if cand.get("rights_outlook") == "refused":

@@ -40,6 +40,10 @@ def send(text: str, *, kind: str, thread_ts: str | None = None, files: list[str]
     sent = json.loads(sent_log.read_text()) if sent_log.exists() else {}
     if dedupe_key and dedupe_key in sent:
         return {"status": "duplicate_skipped", **sent[dedupe_key]}
+    if dedupe_key and OUTBOX.exists():   # already queued but not yet delivered
+        for q in OUTBOX.glob("*.json"):
+            if json.loads(q.read_text()).get("dedupe_key") == dedupe_key:
+                return {"status": "already_queued", "id": q.stem}
     token = config.env("SLACK_BOT_TOKEN")
     if token:
         h = {"Authorization": f"Bearer {token}"}
