@@ -383,6 +383,51 @@ def cmd_sheet_sync(a):
     _print(sync_tracker(d, Store().to_csv(), rows))
 
 
+def cmd_drive_check(a):
+    """Read-only check of a folder plus a tiny upload/delete test. Prints no credentials."""
+    import requests
+    from datetime import datetime, timezone
+    from .storage import API, UPLOAD, Drive
+    d = Drive()
+    ok, how = d.available()
+    out = {"credentials": how if ok else f"MISSING: {how}"}
+    if not ok:
+        _print(out)
+        sys.exit(1)
+    h = d._auth()
+    out["token"] = "obtained"
+    about = requests.get(f"{API}/about", headers=h, params={"fields": "user(emailAddress)"}, timeout=30)
+    out["signed_in_as"] = about.json().get("user", {}).get("emailAddress") if about.ok else f"error {about.status_code}"
+    f = requests.get(f"{API}/files/{a.folder}", headers=h, timeout=30, params={
+        "fields": "id,name,mimeType,owners(emailAddress),capabilities(canAddChildren,canEdit)", "supportsAllDrives": True})
+    if not f.ok:
+        out["folder"] = f"error {f.status_code}: {f.json().get('error', {}).get('message', '')[:160]}"
+        _print(out)
+        sys.exit(1)
+    meta = f.json()
+    out["folder"] = {"name": meta["name"], "owner": [o["emailAddress"] for o in meta.get("owners", [])],
+                     "can_add_files": meta["capabilities"]["canAddChildren"]}
+    kids = requests.get(f"{API}/files", headers=h, timeout=30, params={
+        "q": f"'{a.folder}' in parents and trashed = false", "fields": "files(name,mimeType)", "pageSize": 100,
+        "supportsAllDrives": True, "includeItemsFromAllDrives": True}).json().get("files", [])
+    out["contents"] = sorted(("📁 " if k["mimeType"].endswith("folder") else "") + k["name"] for k in kids)
+    if a.upload_test:
+        name = f"_wi_connection_test_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}.txt"
+        up = requests.post(UPLOAD, headers=h, timeout=60, params={"uploadType": "multipart", "supportsAllDrives": True,
+                                                                    "fields": "id,name,size"},
+                           files={"metadata": (None, json.dumps({"name": name, "parents": [a.folder]}), "application/json"),
+                                  "file": ("t.txt", b"World Ignored automation connection test. Safe to delete.\n", "text/plain")})
+        if up.ok:
+            fid = up.json()["id"]
+            back = requests.get(f"{API}/files/{fid}", headers=h, params={"alt": "media", "supportsAllDrives": True}, timeout=30)
+            dele = requests.delete(f"{API}/files/{fid}", headers=h, params={"supportsAllDrives": True}, timeout=30)
+            out["upload_test"] = {"uploaded": name, "read_back_ok": back.ok and back.content.startswith(b"World Ignored"),
+                                  "deleted": dele.status_code == 204}
+        else:
+            out["upload_test"] = f"error {up.status_code}: {up.json().get('error', {}).get('message', '')[:160]}"
+    _print(out)
+
+
 def cmd_drive_init(a):
     d = _drive()
     if not d:
@@ -426,6 +471,7 @@ def main(argv=None):
     add("tracker-csv", cmd_tracker_csv)
     add("sheet-sync", cmd_sheet_sync, (["--with-analytics"], {"action": "store_true"}))
     add("drive-init", cmd_drive_init, (["--root"], {}))
+    add("drive-check", cmd_drive_check, (["folder"], {}), (["--upload-test"], {"action": "store_true"}))
     a = p.parse_args(argv)
     a.fn(a)
 
