@@ -1,0 +1,446 @@
+{
+ "items": {
+  "WI-LEGACY-australia-powerful-storm-batters-a": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Australia",
+    "event_date": "2026-10-12",
+    "location": "Alice Springs",
+    "new_development": false,
+    "sources": [],
+    "title": "Powerful storm batters Alice Springs",
+    "type": "storm"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:powerful-storm-batters-alice-springs"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-australia-powerful-storm-batters-a",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-india-landslide-hits-shimla-ro": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "India",
+    "event_date": "2026-10-07",
+    "location": "Shimla",
+    "new_development": false,
+    "sources": [],
+    "title": "Landslide hits Shimla road",
+    "type": "landslide"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:landslide-hits-shimla-road"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-india-landslide-hits-shimla-ro",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-mexico-workers-save-a-driver-fr": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "Mexico",
+    "event_date": "2026-10-16",
+    "location": "Monterrey",
+    "new_development": false,
+    "sources": [],
+    "title": "Workers save a driver from raging floodwaters",
+    "type": "flood"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:workers-save-a-driver-from-raging-floodw"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-mexico-workers-save-a-driver-fr",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-new-zealand-wildfire-burns-above-lak": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "New Zealand",
+    "event_date": "2026-10-06",
+    "location": "Walter Peak",
+    "new_development": false,
+    "sources": [],
+    "title": "Wildfire burns above Lake Whakatipu",
+    "type": "wildfire"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:wildfire-burns-above-lake-whakatipu"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-new-zealand-wildfire-burns-above-lak",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  },
+  "WI-LEGACY-united-state-california-coastal-homes": {
+   "approval": {
+    "at": "",
+    "by": "",
+    "content_hash": "",
+    "notes": "",
+    "platforms": [],
+    "slack_ts": "",
+    "status": "none"
+   },
+   "captions": {},
+   "created_at": "2026-10-19T02:40:05+00:00",
+   "discovered_by": "legacy import (posted manually before automation; from #world-ignored screenshots)",
+   "edit": {
+    "closing_headline": "",
+    "closing_subhead": "",
+    "content_hash": "",
+    "flags": [],
+    "headline": "",
+    "location_line": "",
+    "outputs": {},
+    "subhead": "",
+    "trim": [
+     null,
+     null
+    ]
+   },
+   "errors": [],
+   "event": {
+    "country": "United States",
+    "event_date": "",
+    "location": "Long Beach, California",
+    "new_development": false,
+    "sources": [],
+    "title": "California coastal homes battered by waves",
+    "type": "storm"
+   },
+   "footage": {
+    "description": "",
+    "duration_s": null,
+    "filmed_date": "",
+    "orientation": "",
+    "original_creator": "",
+    "platform": "",
+    "published_date": "",
+    "raw_drive_id": "",
+    "raw_path": "",
+    "sha256": "",
+    "uploader": "",
+    "url": "legacy:california-coastal-homes-battered-by-wav"
+   },
+   "history": [
+    {
+     "at": "2026-10-19T02:40:05+00:00",
+     "by": "import",
+     "from": null,
+     "note": "manual post before automation; exact event date not shown",
+     "to": "PUBLISHED"
+    }
+   ],
+   "id": "WI-LEGACY-united-state-california-coastal-homes",
+   "metrics": {},
+   "publish": {},
+   "rights": {
+    "attribution": "",
+    "evidence_ref": "",
+    "holder": "",
+    "license_type": "",
+    "obtained_at": "",
+    "permitted_platforms": [],
+    "restrictions": "",
+    "status": "unknown (pre-automation)"
+   },
+   "schedule": {
+    "date": "",
+    "slot": "",
+    "time": ""
+   },
+   "score": null,
+   "status": "PUBLISHED",
+   "verification": {
+    "checks": [],
+    "concerns": [],
+    "confidence": 0.0,
+    "event_verified": false,
+    "footage_verified": false
+   }
+  }
+ },
+ "updated_at": "2026-10-19T02:40:05+00:00",
+ "version": 1
+}

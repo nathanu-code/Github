@@ -1,0 +1,8 @@
+numpy>=2.0
+opencv-python-headless>=4.10
+pillow>=10.0
+pyyaml>=6.0
+requests>=2.31
+requests-oauthlib>=2.0
+google-auth>=2.30
+pytest>=8.0
